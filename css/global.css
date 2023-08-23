@@ -1100,6 +1100,11 @@ p {
   padding: 1rem;
 }
 
+@media screen and (max-width: 993px) {
+  .my-dropdown-box.date-box {
+    background-color: transparent;
+  }
+}
 .my-dropdown-box.show {
   display: block;
 }

@@ -5853,7 +5853,8 @@ a.btn_explore:hover {
 .visa_page.radio_cat .switch-field .visa_label {
   background-color: #fc5b62;
 }
-.tickets_page.radio_cat .switch-field .tickets_label {
+.tickets_page.radio_cat .switch-field .tickets_label,
+.results_page.radio_cat .switch-field .tickets_label {
   background-color: #fc5b62;
 }
 .cars_page.radio_cat .switch-field .cars_label {
@@ -6961,6 +6962,10 @@ a.social_bt.google:before {
   -webkit-box-shadow: 0 12px 35px 2px rgba(0, 0, 0, 0.12);
   -moz-box-shadow: 0 12px 35px 2px rgba(0, 0, 0, 0.12);
   box-shadow: 0 12px 35px 2px rgba(0, 0, 0, 0.12);
+  display: none;
+  top: 70px;
+  left: 0px;
+  right: auto;
 }
 
 @media screen and (min-width: 560px) {
@@ -8160,6 +8165,7 @@ ul.plan-features {
   background-color: rgba(0, 0, 0, 0.8);
   align-items: center;
   justify-content: center;
+  z-index: 10;
 }
 
 .attraction .close-btn {
@@ -9059,4 +9065,11 @@ option:focus {
   gap: 20px;
   align-items: center;
   align-self: baseline;
+}
+
+.results_page .btn-input {
+  cursor: auto;
+}
+.sorting {
+  display: flex;
 }
