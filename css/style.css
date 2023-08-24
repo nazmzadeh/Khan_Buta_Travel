@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
 body {
   overflow-x: hidden;
@@ -6256,7 +6257,7 @@ a.social_bt {
   transition: all 0.5s ease;
 }
 
-.showBtn {
+.showBtn#toTop {
   opacity: 1;
   transform: translateY(0);
 }
@@ -6474,6 +6475,9 @@ ul.bullets li:before {
 }
 
 @media (max-width: 575px) {
+  hr {
+    display: none;
+  }
   .hero_in.hotels_detail,
   .hero_in.restaurants_detail,
   .hero_in.tours_detail {
@@ -7737,6 +7741,7 @@ ul.plan-features {
   border-radius: 10px;
   border: 0;
   background-color: #f4f6f8;
+  height: 100%;
 }
 .tours .card .card_img,
 .car_hire_brands .card .card_img {
@@ -7794,28 +7799,28 @@ ul.plan-features {
   font-size: 14px;
 }
 
-.tour_page {
+.root_part {
   background-image: url(../img/hero-home-3.jpg);
   background-position: center;
   background-repeat: no-repeat;
   min-height: 350px;
 }
-.tour_page > img {
+.root_part > img {
   height: 320px;
 }
-.tour_page .tour_title {
+.root_part .tour_title {
   font-weight: 700;
   color: white;
 }
 
-.tour_page a {
+.root_part a {
   color: white;
   font-size: 19px;
 }
-.tour_page a:hover {
+.root_part a:hover {
   color: black;
 }
-.tour_page span a:last-child {
+.root_part span a:last-child {
   color: #fc5b62;
 }
 .tour_main .tour_img {
@@ -7823,7 +7828,7 @@ ul.plan-features {
   height: 415px;
   padding: 0;
 }
-.tour_page .myContainer {
+.root_part .myContainer {
   background: white;
   padding: 39px 45px;
   margin-top: 30px;
@@ -7881,9 +7886,11 @@ ul.plan-features {
   padding-right: 2rem;
   z-index: 1;
   transition: 0.3s ease;
+  background-color: #fc5b62;
+  font-weight: 700;
 }
 .tour_main .reservation button a {
-  color: black;
+  color: white;
 }
 .tour_main .contact {
   padding: 12px;
@@ -8093,6 +8100,9 @@ ul.plan-features {
   width: 100%;
   font-weight: 600;
   font-size: 17px;
+}
+.myContainer .car_hire_brands .myRow .card {
+  height: auto;
 }
 .car_hire_brands .btn:hover {
   background-color: #121921;
@@ -8386,12 +8396,6 @@ iframe {
   font-weight: 600;
 }
 
-.reservation ul {
-  display: flex;
-  gap: 88px;
-  flex-wrap: wrap;
-  padding: 0;
-}
 .reservation .myContainer {
   display: flex;
   flex-direction: column;
@@ -8417,6 +8421,7 @@ form .input-part label {
   padding: 4px 10px;
   color: #444;
   z-index: 8;
+  font-weight: 600;
 }
 
 form .input-part input,
@@ -8452,7 +8457,7 @@ form .input-part select {
 .reservation .main-left-bar .form-bar-main .operators .operator-self input {
   height: 50px;
   width: 52px;
-  border: 1px solid #ffd500;
+  border: 1px solid #e3464c;
   text-align: center;
 }
 .reservation .main-left-bar .form-bar-main .operators .operator-self span {
@@ -8461,7 +8466,11 @@ form .input-part select {
 }
 .reservation .main-left-bar .form-bar-main .operators .btn {
   padding: 10px;
-  background-color: #ffd500;
+  background-color: #e3464c;
+  color: white;
+}
+.reservation .main-left-bar .form-bar-main .operators .btn span {
+  font-weight: 700;
 }
 .reservation .main-left-bar {
   width: calc(100% - 277px);
@@ -8495,7 +8504,7 @@ form .input-part select {
   align-items: center;
   font-size: 14px;
   padding: 0 10px;
-  border: 1px solid #ffd500;
+  border: 1px solid #e3464c;
   border-radius: 4px;
 }
 
@@ -8506,11 +8515,13 @@ form .input-part select {
   align-items: center;
   font-size: 14px;
   padding: 0 10px;
-  border: 1px solid #ffd500;
-  background-color: #ffd500;
+  border: 1px solid #e3464c;
+  background-color: #e3464c;
   border-radius: 4px;
   justify-content: center;
   transition: 0.3s ease;
+  color: white;
+  font-weight: 700;
 }
 .operator-contact {
   display: flex;
@@ -8532,15 +8543,15 @@ form .input-part select {
   position: relative;
 }
 .operator-contact .g-control .g-checkbox-part input {
-  accent-color: #ffd500;
+  accent-color: #e3464c;
 }
 .operator-contact .g-control .g-checkbox-part label::before {
   position: absolute;
   content: "";
   top: 50%;
   transform: translateY(-50%);
-  background-color: #ffd500;
-  border: 1px solid #ffd500;
+  background-color: #e3464c;
+  border: 1px solid #e3464c;
 }
 .g-checkbox-part label:after {
   width: 13px;
@@ -9072,4 +9083,179 @@ option:focus {
 }
 .sorting {
   display: flex;
+  justify-content: space-between;
+}
+
+.sort_part:hover *,
+.sorting .active * {
+  color: #e3464c;
+}
+
+.sorting .sort_part {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  padding: 20px;
+}
+.sort_part.active::after,
+.sort_part::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #e3464c;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.sort_part.active,
+.sort_part:hover::after,
+.sort_part.active::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.myContainer.results_container {
+  background-color: transparent;
+}
+
+.results_page .sticky_side {
+  height: 100%;
+}
+.results .sort_title {
+  font-weight: 600;
+}
+.results .sorting {
+  justify-content: space-between;
+}
+.results .padding {
+  background-color: white;
+  padding: 20px;
+}
+.results .info {
+  color: rgb(79, 94, 113);
+  font-size: 13px;
+}
+.results_list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.results_list svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+.results_list svg.circle {
+  color: rgb(186, 199, 213);
+}
+.results_list .time {
+  width: 66px;
+}
+.results_list .duration {
+  color: rgb(79, 94, 113);
+  font-size: 13px;
+}
+.results_list .part {
+  display: flex;
+  gap: 14px;
+}
+.results_list .part p:last-child span {
+  color: rgb(105, 125, 149);
+}
+.results_list .list .title {
+  font-size: 13px;
+  color: rgb(79, 94, 113);
+}
+
+.results .right-part {
+  background-color: white;
+  height: 100%;
+  padding: 15px;
+}
+.results .price {
+  font-size: 22px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 93%;
+}
+.results .select_btn {
+  display: flex;
+  width: 100%;
+  text-align: center;
+}
+.results .select_btn a {
+  height: 32px;
+  position: relative;
+  max-width: 100%;
+  background: #e3464c;
+  border: 0px;
+  padding: 7px 12px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  width: 100%;
+  appearance: none;
+  color: rgb(255, 255, 255);
+  transition: all 0.15s ease-in-out 0s;
+}
+.results .select_btn a:hover {
+  text-decoration: none;
+  background-color: #8b0000;
+}
+.results .col-row {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.results .sort-row {
+  padding: 0;
+  background-color: white;
+}
+.results .stop span {
+  background: #f4f6f8;
+  color: black;
+  padding: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 25px;
+}
+.road {
+  position: relative;
+}
+.road .line {
+  position: absolute;
+  left: 46%;
+  width: 1px;
+  height: 22px;
+  background: rgb(232, 237, 241);
+}
+.line.top {
+  top: 19px;
+}
+.line.bottom {
+  bottom: 17px;
+}
+.circle-point {
+  fill: rgb(186, 199, 213);
+}
+.load_more_btn {
+  height: 32px;
+  max-width: 100%;
+  background: #f2f2f2;
+  border: 0px;
+  padding: 7px 12px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  width: 100%;
+  appearance: none;
+  color: rgb(255, 255, 255);
+  transition: all 0.15s ease-in-out 0s;
 }

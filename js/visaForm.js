@@ -1,4 +1,3 @@
-const form = document.getElementById('multi-step-form');
 const steps = Array.from(document.querySelectorAll('.form-step'));
 const progressBar = document.querySelector('.indicator');
 const buttons = document.querySelectorAll("button");
@@ -37,15 +36,7 @@ function showStep(stepIndex) {
     });
 }
 
-function handleSubmit(event) {
-    event.preventDefault();
-    const formData = new FormData(form);
-    const values = {};
-    for (const [key, value] of formData.entries()) {
-        values[key] = value;
-    }
-    console.log('Form data:', values);
-}
+
 
 const today = new Date();
 const issueDate = new Date(today);
@@ -62,7 +53,6 @@ dateInput.min = issueDateString;
 function init() {
     updateProgressBar();
     showStep(currentStep);
-    form.addEventListener('submit', handleSubmit);
 
     steps.forEach((step, index) => {
         const nextButton = step.querySelector('.next-button');
@@ -167,14 +157,14 @@ function init() {
 
 init();
 
-const phoneInputField = document.querySelectorAll(".telephone");
-phoneInputField.forEach((phone) => {
-    const phoneInput = window.intlTelInput(phone, {
-        preferredCountries: ["az", "pk"],
-        utilsScript:
-            "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
-    });
-})
+// const phoneInputField = document.querySelectorAll(".telephone");
+// phoneInputField.forEach((phone) => {
+//     const phoneInput = window.intlTelInput(phone, {
+//         preferredCountries: ["az", "pk"],
+//         utilsScript:
+//             "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+//     });
+// })
 
-console.log(phoneInputField)
+// console.log(phoneInputField)
 // console.log(phoneInput)

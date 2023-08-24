@@ -14,6 +14,10 @@
     </title>
 
     <!-- GOOGLE WEB FONT -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+    />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="
@@ -100,7 +104,7 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
       <!-- /header -->
 
       <main>
-        <section class="hero_single radio_cat tour_page" data-jarallax>
+        <section class="hero_single radio_cat root_part" data-jarallax>
           <div
             class="wrapper opacity-mask"
             data-opacity-mask="rgba(0, 0, 0, 0.6)"
@@ -126,11 +130,7 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
             <div class="title">
               <h2>Tour packages to Fethiye's Liberty hotels</h2>
             </div>
-            <form
-              id="tour-booking-form"
-              class="form"
-              data-gtm-form-interact-id="0"
-            >
+            <form id="tour-booking-form" class="form" method="get">
               <div class="main-left-bar">
                 <div class="tour-information-bar">
                   <div>
@@ -162,11 +162,11 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
                     </div>
                     <div class="input-part">
                       <input
-                        name="phone"
-                        autocomplete="off"
-                        value=""
-                        class="error"
-                      /><label for="phone">Contact number</label>
+                        id="contact-number"
+                        type="tel"
+                        name="contact-number"
+                        class="telephone"
+                      /><label for="contact-number">Contact number</label>
                     </div>
                     <div class="input-part">
                       <input
@@ -565,6 +565,7 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
     <!-- Back to top button -->
 
     <!-- COMMON SCRIPTS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
     <script src="./js/incdecbtns.js"></script>
     <script src="js/common_scripts.js"></script>
     <script src="js/main.js"></script>
