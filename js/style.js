@@ -147,3 +147,44 @@ phoneInputField.forEach((phone) => {
 })
 
 console.log(phoneInputField)
+
+const sortByOthers = document.querySelector(".sort_by_others ");
+const otherOptions = document.querySelector(".sort_part ul");
+
+sortByOthers.onclick = () => {
+    otherOptions.classList.toggle("visible")
+
+}
+console.log(otherOptions)
+
+document.addEventListener('DOMContentLoaded', function () {
+    const openModalButton = document.querySelector('.openSortModalBtn');
+    const closeModalButton = document.getElementById('closeModalButton');
+    const sortingModal = document.getElementById('sortingModal');
+    const sortingRadios = document.querySelectorAll('input[name="sorting"]');
+    const sortTitles = document.querySelectorAll('.sort_title');
+
+    openModalButton.addEventListener('click', function () {
+        sortingModal.classList.toggle('show');
+        overlay.classList.toggle('show');
+    });
+    closeModalButton.addEventListener('click', function () {
+        sortingModal.classList.remove('show');
+        overlay.classList.remove('show');
+    });
+    overlay.addEventListener('click', function () {
+        sortingModal.classList.remove('show');
+        overlay.classList.remove('show');
+    });
+    sortingRadios.forEach(function (radio) {
+        radio.addEventListener('change', function () {
+            const selectedText = radio.previousElementSibling.firstElementChild.textContent;
+            openModalButton.querySelector('span').textContent = selectedText;
+        });
+    });
+
+    const defaultRadio = document.querySelector('input[name="sorting"][value="best"]');
+    defaultRadio.checked = true;
+    const defaultText = defaultRadio.nextElementSibling.previousElementSibling.firstElementChild.textContent;
+    openModalButton.querySelector('span').textContent = defaultText;
+});
