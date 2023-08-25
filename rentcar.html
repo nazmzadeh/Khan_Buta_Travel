@@ -14,6 +14,10 @@
     </title>
 
     <!-- GOOGLE WEB FONT -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+    />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="
@@ -136,23 +140,33 @@
               </div>
               <div class="location myRow">
                 <div class="pickup part input-part">
-                  <label for="pickup location">Pickup location</label>
+                  <label for="pickup_city">Pickup city</label>
                   <div>
-                    <select name="pickup location" required>
-                      <option>Select the pickup location</option>
+                    <select name="pickup_city location" required>
+                      <option>Select the pickup city</option>
                       <option value="Baku">Baku</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="pickup part input-part">
+                  <label for="pickup location">Pickup location</label>
+                  <input type="text" name="pickup location" required />
+                </div>
+              </div>
+              <div class="location myRow">
+                <div class="dropoff part input-part">
+                  <label for="drop off location">Drop off city</label>
+                  <div>
+                    <select name="drop off location">
+                      <option>Select the drop off city</option>
+                      <option value="Lankaran">Lankaran</option>
+                      <option value="Quba">Quba</option>
                     </select>
                   </div>
                 </div>
                 <div class="dropoff part input-part">
                   <label for="drop off location">Drop off location</label>
-                  <div>
-                    <select name="drop off location" required>
-                      <option>Select the drop off location</option>
-                      <option value="Lankaran">Lankaran</option>
-                      <option value="Quba">Quba</option>
-                    </select>
-                  </div>
+                  <input type="text" name="drop off location" />
                 </div>
               </div>
               <div class="date myRow">
@@ -173,7 +187,12 @@
                 <div class="phone_number part input-part">
                   <label for="phone-number">Phone number</label>
                   <div>
-                    <input type="text" name="phone-number" required />
+                    <input
+                      id="phone-number"
+                      type="tel"
+                      name="phone-number"
+                      class="telephone"
+                    />
                   </div>
                 </div>
                 <div class="price_part input-part">
@@ -283,6 +302,7 @@
 
     <!-- COMMON SCRIPTS -->
     <!-- <script src="./js/visaForm.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
     <script src="js/common_scripts.js"></script>
     <script src="js/main.js"></script>
   </body>

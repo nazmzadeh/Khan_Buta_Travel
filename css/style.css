@@ -5856,7 +5856,12 @@ a.btn_explore:hover {
   background-color: #fc5b62;
 }
 .tickets_page.radio_cat .switch-field .tickets_label,
-.results_page.radio_cat .switch-field .tickets_label {
+.results_page.radio_cat
+  .switch-field
+  .tickets_label
+  .ticket_details_page.radio_cat
+  .switch-field
+  .tickets_label {
   background-color: #fc5b62;
 }
 .cars_page.radio_cat .switch-field .cars_label {
@@ -7780,11 +7785,11 @@ ul.plan-features {
 .card .card-body {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  justify-content: space-between;
 }
 .card .card-body .info {
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
 }
 .card .card-body .info .price {
   font-size: 18px;
@@ -7803,7 +7808,6 @@ ul.plan-features {
 .root_part {
   background-image: url(../img/hero-home-3.jpg);
   background-position: center;
-  background-repeat: no-repeat;
   min-height: 350px;
 }
 .root_part > img {
@@ -7917,11 +7921,20 @@ ul.plan-features {
 .full-width .slick-next {
   margin-right: 40px;
 }
-
+.slick-prev,
+.slick-next {
+  width: 50px;
+  position: absolute;
+  height: 50px;
+  z-index: 100;
+}
+.slick-prev {
+  top: -8px;
+}
 .slick-prev:before,
 .slick-next:before {
   font-size: 40px !important;
-  color: white !important;
+  color: gray !important;
 }
 .slick-dots {
   bottom: 50px !important;
@@ -7941,12 +7954,12 @@ ul.plan-features {
     height: 260px;
   }
 }
-@media screen and (max-width: 860px) {
-  .slick-lightbox-slick .slick-prev,
+/* @media screen and (max-width: 860px) {
+  .slick-prev,
   .slick-next {
     display: none !important;
   }
-}
+} */
 @media screen and (max-width: 768px) {
   .tour_main .reserve {
     position: fixed;
@@ -8142,6 +8155,9 @@ ul.plan-features {
 .car_hire_brands .card .card-footer {
   padding: 0;
 }
+.attraction {
+  padding: 0px 17px;
+}
 .attraction .gallery {
   display: grid;
   grid-template-columns: repeat(2, 2fr);
@@ -8157,7 +8173,7 @@ ul.plan-features {
 
 .first {
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 .right {
   display: flex;
@@ -8410,6 +8426,7 @@ iframe {
   border-radius: 4px;
   padding: 27px 31px;
   margin-bottom: 24px;
+  font-weight: 700;
 }
 form .input-part {
   position: relative;
@@ -8626,7 +8643,7 @@ form .input-part select {
 }
 .visa-form .form-step.active {
   display: flex;
-  gap: 20px;
+  gap: 30px;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -8978,7 +8995,7 @@ form button:focus {
 }
 .file-custom:before {
   position: absolute;
-  top: -0.075rem;
+  top: 0rem;
   right: -0.075rem;
   bottom: -0.075rem;
   z-index: 6;
@@ -9048,7 +9065,7 @@ form button:focus {
 #rent_form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
   margin-top: 25px;
 }
 
@@ -9062,16 +9079,15 @@ form .myRow {
   color: #e3464c;
   align-self: baseline;
 }
+#rent_form .iti {
+  width: 100%;
+}
 form select option {
   height: inherit;
   padding: 8px 15px 8px 15px;
   border: 1px solid #ccc;
 }
-form select option:checked,
-option:hover,
-option:focus {
-  background-color: #e3464c;
-}
+
 .price_part {
   display: flex;
   gap: 20px;
@@ -9081,6 +9097,9 @@ option:focus {
 
 .results_page .btn-input {
   cursor: auto;
+}
+.results hr {
+  color: gray;
 }
 .sorting {
   display: flex;
@@ -9288,6 +9307,9 @@ z.sorting.active span {
   flex-shrink: 0;
   vertical-align: middle;
 }
+.results_list .stations svg {
+  transform: rotate(90deg);
+}
 .results_list svg.circle {
   color: rgb(186, 199, 213);
 }
@@ -9347,7 +9369,7 @@ z.sorting.active span {
   text-decoration: none;
   background-color: #8b0000;
 }
-.results .col-row {
+.col-row {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -9405,4 +9427,28 @@ z.sorting.active span {
   .results .right-part {
     height: auto;
   }
+}
+
+.no-matches-img {
+  padding: 0px 40px;
+}
+.no-matches h3 {
+  font-weight: 700;
+}
+.no-matches-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.no-matches img {
+  width: 210px;
+  height: 277px;
+}
+.no-matches .col-row {
+  gap: 34px;
+}
+
+.myContainer h1 svg {
+  width: 24px;
+  height: 24px;
 }
