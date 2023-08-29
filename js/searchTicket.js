@@ -28,7 +28,7 @@ myModal();
 
 const cityContainer = () => {
 
-    const input = document.querySelector('.js-city-select');
+    const inputs = document.querySelectorAll('.js-city-select');
     const dropdown = document.querySelector('.js-select-dropdown');
     const reset = document.querySelector('.js-city-select-reset');
     const buttons = document.querySelectorAll('.js-select-dropdown-btn');
@@ -73,7 +73,7 @@ const cityContainer = () => {
         dropdown.classList.remove('show')
     }
 
-    input.addEventListener('focusin', show);
+    inputs.forEach((input) => input.addEventListener('focusin', show));
     input.addEventListener('input', search);
     reset.addEventListener('click', resetAll);
     buttons.forEach((btn) => { btn.addEventListener('click', selectCity) });

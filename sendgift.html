@@ -143,9 +143,22 @@
                 <div class="delivery part input-part">
                   <label for="delivery date">Delivery date</label>
                   <div>
-                    <input type="date" name="delivery date" required />
+                    <input type="date" name="delivery-date" required />
                   </div>
                 </div>
+                <div class="location part input-part">
+                  <label for="delivery address">Delivery address</label>
+                  <div>
+                    <input
+                      type="text"
+                      name="delivery-address"
+                      placeholder="City,Street,Street No,Apartment"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="myRow">
                 <div class="phone_number part input-part">
                   <label for="phone-number">Phone number</label>
                   <div>
@@ -157,11 +170,12 @@
                     />
                   </div>
                 </div>
+                <div class="price_part input-part">
+                  <p class="price_text">Price:</p>
+                  <span class="price">$100</span>
+                </div>
               </div>
-              <div class="price_part input-part">
-                <p class="price_text">Price:</p>
-                <span class="price">$100</span>
-              </div>
+
               <div class="buttons">
                 <button type="submit" class="form-control">Submit</button>
               </div>

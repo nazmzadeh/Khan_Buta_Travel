@@ -7731,23 +7731,23 @@ ul.plan-features {
   background-color: white;
   margin: 0 auto;
 }
-.tours .myContainer .myRow,
-.car_hire_brands .myContainer .myRow,
-.gifts .myContainer .myRow {
-  margin-top: 20px;
+.myContainer .tours .myRow,
+.myContainer .car_hire_brands .myRow,
+.myContainer .gifts .myRow {
   justify-content: center;
 }
 
 @media screen and (max-width: 776px) {
-  .tours .myContainer .myRow,
-  .car_hire_brands .myContainer .myRow,
-  .gifts .myContainer .myRow {
+  .myContainer .tours .myRow,
+  .myContainer .car_hire_brands .myRow,
+  .myContainer .gifts .myRow {
     align-items: center;
   }
 }
 
 .myContainer .title {
   display: flex;
+  margin-bottom: 35px;
 }
 .myContainer .title h2 {
   padding: 0px 47px;
@@ -7802,9 +7802,13 @@ ul.plan-features {
   display: flex;
   justify-content: end;
 }
+.gifts .card-body .info {
+  justify-content: start;
+}
 .card .card-body .info .price {
   font-size: 18px;
   font-weight: 600;
+  color: #fc5b62;
   align-items: center;
 }
 .card .card-body .info img {
@@ -8392,7 +8396,7 @@ iframe {
   width: 100%;
 }
 .attraction .gallery_mobile .slick-prev {
-  left: -48px;
+  left: -40px;
 }
 .attraction .gallery_mobile .slick-next {
   right: -15px;
@@ -8494,10 +8498,19 @@ form .input-part select {
   flex-wrap: wrap;
 }
 .reservation .main-left-bar .form-bar-main .operators .operator-self input {
-  height: 50px;
+  height: 47px;
   width: 52px;
   border: 1px solid #e3464c;
   text-align: center;
+}
+
+.reservation
+  .main-left-bar
+  .form-bar-main
+  .operators
+  .operator-self
+  input:focus {
+  outline: none;
 }
 .reservation .main-left-bar .form-bar-main .operators .operator-self span {
   height: 50px;
@@ -8659,7 +8672,7 @@ form .input-part select {
 .visa-form .form-step {
   display: none;
 }
-.visa-form h2 {
+section h2 {
   font-weight: 700;
 }
 .visa-form .form-step.active {
@@ -9474,6 +9487,7 @@ z.sorting.active span {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  align-items: center;
 }
 .no-matches img {
   width: 210px;
