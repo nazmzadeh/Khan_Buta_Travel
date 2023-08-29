@@ -74,9 +74,9 @@ const navbar = () => {
 $(document).ready(function () {
 
     $('.slick_lightbox').slick({
-        dots: true,
+        dots: false,
         slidesToShow: 1,
-        arrows: false,
+        arrows: true,
 
     });
 

@@ -448,16 +448,22 @@ p {
 \*---------------------------*/
 
 .slick-prev {
-  left: -15px;
+  left: -30px;
   z-index: 1;
 }
 
 .slick-prev,
 .slick-next {
-  right: 5px;
+  right: 0px;
   top: 33%;
 }
 
+@media screen and (max-width: 520px) {
+  .slick-next::before,
+  .slick-prev::before {
+    font-size: 24px !important;
+  }
+}
 .slick-arrow::before {
   color: gray !important;
   font-size: 30px;

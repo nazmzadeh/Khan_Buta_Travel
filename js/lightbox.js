@@ -72,9 +72,9 @@ function updateImageIndex() {
 $(document).ready(function () {
 
     $('.gallery_mobile').slick({
-        dots: true,
+        dots: false,
         slidesToShow: 1,
-        arrows: false,
+        arrows: true,
 
     });
 

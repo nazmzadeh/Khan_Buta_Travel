@@ -5856,15 +5856,14 @@ a.btn_explore:hover {
   background-color: #fc5b62;
 }
 .tickets_page.radio_cat .switch-field .tickets_label,
-.results_page.radio_cat
-  .switch-field
-  .tickets_label
-  .ticket_details_page.radio_cat
-  .switch-field
-  .tickets_label {
+.results_page.radio_cat .switch-field .tickets_label,
+.ticket_details_page.radio_cat .switch-field .tickets_label {
   background-color: #fc5b62;
 }
 .cars_page.radio_cat .switch-field .cars_label {
+  background-color: #fc5b62;
+}
+.gifts_page.radio_cat .switch-field .gifts_label {
   background-color: #fc5b62;
 }
 
@@ -7733,10 +7732,20 @@ ul.plan-features {
   margin: 0 auto;
 }
 .tours .myContainer .myRow,
-.car_hire_brands .myContainer .myRow {
+.car_hire_brands .myContainer .myRow,
+.gifts .myContainer .myRow {
   margin-top: 20px;
   justify-content: center;
 }
+
+@media screen and (max-width: 776px) {
+  .tours .myContainer .myRow,
+  .car_hire_brands .myContainer .myRow,
+  .gifts .myContainer .myRow {
+    align-items: center;
+  }
+}
+
 .myContainer .title {
   display: flex;
 }
@@ -7750,7 +7759,8 @@ ul.plan-features {
   height: 100%;
 }
 .tours .card .card_img,
-.car_hire_brands .card .card_img {
+.car_hire_brands .card .card_img,
+.gifts .card .card_img {
   height: 180px;
   width: 271px;
   border-top-left-radius: inherit;
@@ -7761,7 +7771,8 @@ ul.plan-features {
   height: 210px;
 }
 .tours .myRow .myCol,
-.car_hire_brands .myRow .myCol {
+.car_hire_brands .myRow .myCol,
+.gifts .myRow .myCol {
   width: 296px;
 }
 
@@ -7954,12 +7965,7 @@ ul.plan-features {
     height: 260px;
   }
 }
-/* @media screen and (max-width: 860px) {
-  .slick-prev,
-  .slick-next {
-    display: none !important;
-  }
-} */
+
 @media screen and (max-width: 768px) {
   .tour_main .reserve {
     position: fixed;
@@ -7991,6 +7997,9 @@ ul.plan-features {
   }
   .car_hire_brands .myCard {
     width: 100%;
+  }
+  .tour_main .tour_img {
+    height: 150px;
   }
 }
 .section_title {
@@ -8160,7 +8169,7 @@ ul.plan-features {
 }
 .attraction .gallery {
   display: grid;
-  grid-template-columns: repeat(2, 2fr);
+  grid-template-columns: repeat(2, 600px);
   gap: 10px;
   /* flex-wrap: wrap; */
 }
@@ -8181,6 +8190,12 @@ ul.plan-features {
   gap: 7px;
   padding-right: 0 !important;
   padding-left: 0 !important;
+}
+
+@media screen and (max-width: 1266px) {
+  .attraction .gallery {
+    grid-template-columns: auto;
+  }
 }
 .lightbox {
   display: none;
@@ -8375,6 +8390,12 @@ iframe {
 }
 .attraction .gallery_mobile .gallery-img-mobile {
   width: 100%;
+}
+.attraction .gallery_mobile .slick-prev {
+  left: -48px;
+}
+.attraction .gallery_mobile .slick-next {
+  right: -15px;
 }
 .slick-dots li button:before {
   font-size: 13px !important;
@@ -9040,6 +9061,10 @@ form button:focus {
   font-size: 10px;
   width: 100%;
 }
+#multi-step-form .form-step .payment span {
+  font-size: 14px;
+}
+
 .form-step .payment .amount {
   color: #fc5b62;
   font-weight: 700;
@@ -9062,7 +9087,8 @@ form button:focus {
   text-decoration: none;
 }
 
-#rent_form {
+#rent_form,
+#send_form {
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -9073,13 +9099,15 @@ form .myRow {
   display: flex;
   gap: 20px;
 }
-#rent_form .price {
+#rent_form .price,
+#send_form .price {
   font-weight: 700;
   font-size: 33px;
   color: #e3464c;
   align-self: baseline;
 }
-#rent_form .iti {
+#rent_form .iti,
+#send_form .iti {
   width: 100%;
 }
 form select option {
@@ -9287,7 +9315,7 @@ z.sorting.active span {
 .results .sorting {
   justify-content: space-between;
 }
-.results .padding {
+.results_list .padding {
   background-color: white;
   padding: 20px;
 }
@@ -9316,6 +9344,12 @@ z.sorting.active span {
 .results_list .time {
   width: 66px;
 }
+.results_list .time p {
+  margin: 0;
+}
+.results_list .time span {
+  font-size: 12px;
+}
 .results_list .duration {
   color: rgb(79, 94, 113);
   font-size: 13px;
@@ -9323,6 +9357,7 @@ z.sorting.active span {
 .results_list .part {
   display: flex;
   gap: 14px;
+  align-items: center;
 }
 .results_list .part p:last-child span {
   color: rgb(105, 125, 149);
@@ -9448,7 +9483,60 @@ z.sorting.active span {
   gap: 34px;
 }
 
-.myContainer h1 svg {
+.details_container h1 svg {
   width: 24px;
   height: 24px;
+}
+.details_container h1 {
+  font-weight: 700;
+  padding: 25px;
+}
+.results_list .list .itinerary_title .title {
+  font-size: 17px;
+  font-weight: 600;
+  color: black;
+  align-items: center;
+  gap: 7px;
+}
+.results_list .hours {
+  position: relative;
+  font-size: 14px;
+  text-align: center;
+}
+.results_list .hours span::before,
+.results_list .hours span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  width: 42%;
+  height: 1px;
+  background: rgb(232, 237, 241);
+}
+.results_list .hours span::before {
+  left: 0px;
+}
+.results_list .hours span::after {
+  right: 0px;
+}
+.price_sticky {
+  padding: 25px;
+  position: sticky;
+  top: 55px;
+}
+.price_sticky ul {
+  padding: 0;
+}
+.price_sticky ul li {
+  display: flex;
+  justify-content: space-between;
+}
+.price_sticky .total span:last-child {
+  font-weight: 600;
+  font-size: 21px;
+}
+.price_sticky .total {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0px;
 }
