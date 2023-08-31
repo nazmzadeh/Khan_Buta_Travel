@@ -9241,7 +9241,6 @@ z.sorting.active span {
   padding: 6px;
   background-color: #949494;
   color: white;
-  font-weight: 600;
   border: none;
   transition: all 0.3s linear;
 }
@@ -9537,6 +9536,8 @@ z.sorting.active span {
   padding: 25px;
   position: sticky;
   top: 55px;
+  display: flex;
+  flex-direction: column;
 }
 .price_sticky ul {
   padding: 0;
@@ -9554,7 +9555,25 @@ z.sorting.active span {
   justify-content: space-between;
   padding: 10px 0px;
 }
+.price_sticky button {
+  padding: 15px;
+  background-color: #fc5b62;
+  color: white;
+  font-weight: 600;
+  border: 0;
+  transition: all 0.3s ease;
+}
+.price_sticky button:hover {
+  background-color: #8b0000;
+}
+.price_sticky button svg {
+  fill: white;
+  width: 25px;
+}
 
+section.results {
+  position: relative;
+}
 .bags_and_passengers .hidden {
   display: none;
 }
@@ -9566,19 +9585,25 @@ z.sorting.active span {
   position: absolute;
   background-color: white;
   z-index: 2;
+  top: 0;
 }
 
 #toggleButton {
-  margin: 20px;
+  margin: 20px 0px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   background: white;
   width: 200px;
+}
+#toggleButton:hover {
+  background: rgb(229, 234, 239);
+  text-decoration: none;
+  color: rgb(24, 27, 32);
 }
 .open-box-button {
   cursor: pointer;
   display: inline-block;
-  padding: 10px;
+  padding: 10px 10px 0px 10px;
   border: 1px solid #ccc;
   text-align: left;
 }
@@ -9590,14 +9615,6 @@ z.sorting.active span {
   display: flex;
 }
 
-.row-adults,
-.row-children,
-.row-baggages {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
 #customBox .count {
   width: 30px;
   text-align: center;
@@ -9607,10 +9624,101 @@ z.sorting.active span {
   margin-top: 20px;
   text-align: right;
 }
+#customBox .buttons button {
+  height: 32px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  text-align: center;
+  text-decoration: none;
+  flex: 0 0 auto;
+  max-width: 100%;
+  background: rgb(232, 237, 241);
+  border: 0px;
+  padding: 0px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  width: auto;
+  appearance: none;
+  color: black;
+  transition: all 0.15s ease-in-out 0s;
+}
+#customBox .buttons #doneButton:hover {
+  background-color: #8b0000;
+}
+#customBox .buttons #doneButton {
+  background-color: #fc5b62;
+  color: white;
+}
 .count_buttons {
   display: flex;
   gap: 20px;
 }
 #toggleButton svg {
   width: 20px;
+}
+.row_drpdwn {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
+.row_drpdwn p {
+  display: flex;
+  gap: 5px;
+}
+.row_drpdwn svg {
+  width: 25px;
+}
+.counts svg {
+  padding: 2px;
+  height: 20px;
+  width: 20px;
+  background: rgb(232, 237, 241);
+  border-radius: 50%;
+}
+.counts .increase {
+  justify-content: start;
+}
+.row_drpdwn p span span:first-child {
+  font-size: 15px;
+  display: block;
+}
+.row_drpdwn p span span:last-child {
+  font-size: 13px;
+}
+.row_drpdwn .counts {
+  display: flex;
+}
+.row_drpdwn .counts input {
+  max-width: 30px;
+  height: 100%;
+  border: none;
+  cursor: not-allowed;
+  text-align: center;
+}
+.row_drpdwn button {
+  position: relative;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  text-align: center;
+  text-decoration: none;
+  flex: 0 0 auto;
+  max-width: 100%;
+  background: transparent;
+  border: 0px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  width: 44px;
+  appearance: none !important;
+  transition: all 0.15s ease-in-out 0s !important;
 }
