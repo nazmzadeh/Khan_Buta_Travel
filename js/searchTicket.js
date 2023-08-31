@@ -28,7 +28,7 @@ myModal();
 
 const cityContainer = () => {
 
-    const inputs = document.querySelectorAll('.js-city-select');
+    const input = document.querySelector('.js-city-select');
     const dropdown = document.querySelector('.js-select-dropdown');
     const reset = document.querySelector('.js-city-select-reset');
     const buttons = document.querySelectorAll('.js-select-dropdown-btn');
@@ -73,7 +73,7 @@ const cityContainer = () => {
         dropdown.classList.remove('show')
     }
 
-    inputs.forEach((input) => input.addEventListener('focusin', show));
+    input.addEventListener('focusin', show);
     input.addEventListener('input', search);
     reset.addEventListener('click', resetAll);
     buttons.forEach((btn) => { btn.addEventListener('click', selectCity) });
@@ -236,39 +236,6 @@ numberInput();
 // the-end-of-number-input
 
 
-document.addEventListener('DOMContentLoaded', function () {
-
-    const adultInput = document.querySelector(".adult_input");
-    const childrenBtns = document.querySelectorAll(".children-btn");
-    adultInput.value = "0";
-
-    // Function to enable or disable children buttons based on adult input value
-    const toggleChildrenButtons = () => {
-        const isAdultInputZero = adultInput.value === "0";
-        childrenBtns.forEach((btn) => {
-            btn.disabled = isAdultInputZero;
-
-            if (isAdultInputZero) {
-                btn.classList.add("disabled")
-            } else {
-                btn.classList.remove("disabled")
-            }
-
-        });
-    }
-
-    // Attach event listener to adult input
-    adultInput.addEventListener('input', toggleChildrenButtons);
-
-    // Initialize the state of children buttons
-    toggleChildrenButtons();
-
-    // Rest of your existing code...
-
-    // ... (other code)
-
-});
-
 // number-input-with-additionals
 
 const numberInputWithAdditionals = () => {
@@ -322,7 +289,6 @@ const numberInputWithAdditionals = () => {
             selectsLength++;
             newSelect.querySelector('select').setAttribute('name', `age_${selectsLength}`);
             par.appendChild(newSelect);
-            toggleChildrenButtons()
         }
 
         const decreaseSelect = () => {
@@ -340,4 +306,3 @@ const numberInputWithAdditionals = () => {
 }
 
 numberInputWithAdditionals();
-

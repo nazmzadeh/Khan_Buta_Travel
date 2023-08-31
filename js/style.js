@@ -188,3 +188,46 @@ document.addEventListener('DOMContentLoaded', function () {
     const defaultText = defaultRadio.nextElementSibling.previousElementSibling.firstElementChild.textContent;
     openModalButton.querySelector('span').textContent = defaultText;
 });
+
+const toggleButton = document.getElementById('toggleButton');
+const customBox = document.getElementById('customBox');
+const cancelButton = document.getElementById('cancelButton');
+const doneButton = document.getElementById('doneButton');
+const countSpans = document.querySelectorAll('.count');
+
+let tempCounts = [0, 0, 0];
+
+toggleButton.addEventListener('click', () => {
+    customBox.classList.toggle('hidden');
+});
+
+cancelButton.addEventListener('click', () => {
+    customBox.classList.add('hidden');
+});
+
+doneButton.addEventListener('click', () => {
+    customBox.classList.add('hidden');
+    for (let i = 0; i < countSpans.length; i++) {
+        const totalPeopleCount = parseInt(tempCounts[0]) + parseInt(tempCounts[1]);
+        countSpans[0].textContent = totalPeopleCount;
+        countSpans[1].textContent = tempCounts[2]
+    }
+});
+
+const decreaseButtons = document.querySelectorAll('.decrease');
+const increaseButtons = document.querySelectorAll('.increase');
+const countInputs = document.querySelectorAll('.count_input');
+
+for (let i = 0; i < decreaseButtons.length; i++) {
+    decreaseButtons[i].addEventListener('click', () => {
+        if (countInputs[i].value > 0) {
+            countInputs[i].value--;
+            tempCounts[i] = countInputs[i].value;
+        }
+    });
+
+    increaseButtons[i].addEventListener('click', () => {
+        countInputs[i].value++;
+        tempCounts[i] = countInputs[i].value;
+    });
+}

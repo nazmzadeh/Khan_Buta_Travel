@@ -1028,7 +1028,8 @@ section .title {
   display: block;
 }
 
-.select-dropdown-list {
+.select-dropdown-list-first,
+.select-dropdown-list-first {
   display: flex;
   flex-flow: column wrap;
 }

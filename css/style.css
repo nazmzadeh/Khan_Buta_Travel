@@ -9554,3 +9554,63 @@ z.sorting.active span {
   justify-content: space-between;
   padding: 10px 0px;
 }
+
+.bags_and_passengers .hidden {
+  display: none;
+}
+
+#customBox {
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 300px;
+  position: absolute;
+  background-color: white;
+  z-index: 2;
+}
+
+#toggleButton {
+  margin: 20px;
+  display: flex;
+  justify-content: space-around;
+  background: white;
+  width: 200px;
+}
+.open-box-button {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+.open-box-button:hover {
+  background-color: #f0f0f0;
+}
+.count-group {
+  display: flex;
+}
+
+.row-adults,
+.row-children,
+.row-baggages {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#customBox .count {
+  width: 30px;
+  text-align: center;
+}
+
+#customBox .buttons {
+  margin-top: 20px;
+  text-align: right;
+}
+.count_buttons {
+  display: flex;
+  gap: 20px;
+}
+#toggleButton svg {
+  width: 20px;
+}
