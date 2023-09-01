@@ -24,65 +24,107 @@ const myModal = () => {
 }
 
 myModal();
+
+
+// Current City
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // city-container
 
 const cityContainer = () => {
 
-    const input = document.querySelector('.js-city-select');
-    const dropdown = document.querySelector('.js-select-dropdown');
-    const reset = document.querySelector('.js-city-select-reset');
-    const buttons = document.querySelectorAll('.js-select-dropdown-btn');
-    const notFound = document.querySelector('.js-select-dropdown-not-found');
+    const fields = document.querySelectorAll('.js-city-select-field');
 
-    const show = () => dropdown.classList.add('show');
-    const hide = () => dropdown.classList.remove('show');
+    const field = (container) => {
 
-    const resetAll = () => {
-        input.value = "";
-        buttons.forEach((btn) => { btn.classList.remove('d-none') })
-        reset.classList.add('d-none');
-        notFound.classList.remove('show');
-    }
+        const input = container.querySelector('.js-city-select');
+        const dropdown = container.querySelector('.js-select-dropdown');
+        const reset = container.querySelector('.js-city-select-reset');
+        const buttons = container.querySelectorAll('.js-select-dropdown-btn');
+        const notFound = container.querySelector('.js-select-dropdown-not-found');
 
-    const search = (e) => {
+        const show = () => dropdown.classList.add('show');
+        const hide = () => dropdown.classList.remove('show');
 
-        const val = e.target.value.trim().toLowerCase();
-
-        if (val != "") {
-
-            reset.classList.remove('d-none');
-            let notFounded = true;
-            buttons.forEach((btn) => {
-                if (btn.getAttribute('data-title').toLowerCase().includes(val)) { btn.classList.remove('d-none'); notFounded = false; }
-                else { btn.classList.add('d-none') }
-            })
-
-            notFounded ? notFound.classList.add('show') : notFound.classList.remove('show');
-
-        } else {
-            reset.classList.add('d-none');
+        const resetAll = () => {
+            input.value = "";
             buttons.forEach((btn) => { btn.classList.remove('d-none') })
+            reset.classList.add('d-none');
             notFound.classList.remove('show');
         }
 
+        const search = (e) => {
+
+            const val = e.target.value.trim().toLowerCase();
+
+            if (val != "") {
+
+                reset.classList.remove('d-none');
+                let notFounded = true;
+                buttons.forEach((btn) => {
+                    if (btn.getAttribute('data-title').toLowerCase().includes(val)) { btn.classList.remove('d-none'); notFounded = false; }
+                    else { btn.classList.add('d-none') }
+                })
+
+                notFounded ? notFound.classList.add('show') : notFound.classList.remove('show');
+
+            } else {
+                reset.classList.add('d-none');
+                buttons.forEach((btn) => { btn.classList.remove('d-none') })
+                notFound.classList.remove('show');
+            }
+
+        }
+
+        const selectCity = (e) => {
+            input.value = e.target.getAttribute('data-title');
+            reset.classList.remove('d-none');
+            dropdown.classList.remove('show')
+        }
+
+        input.addEventListener('focusin', show);
+        input.addEventListener('input', search);
+        reset.addEventListener('click', resetAll);
+        buttons.forEach((btn) => { btn.addEventListener('click', selectCity) });
+
+        // hide - dropdown - on - click - of - page
+        document.addEventListener('click', function (event) {
+            const innerClick = dropdown.contains(event.target) || input.contains(event.target);
+            if (!innerClick) hide();
+        });
+
     }
 
-    const selectCity = (e) => {
-        input.value = e.target.getAttribute('data-title');
-        reset.classList.remove('d-none');
-        dropdown.classList.remove('show')
-    }
+    fields.forEach((item) => { field(item) })
 
-    input.addEventListener('focusin', show);
-    input.addEventListener('input', search);
-    reset.addEventListener('click', resetAll);
-    buttons.forEach((btn) => { btn.addEventListener('click', selectCity) });
-
-    // hide - dropdown - on - click - of - page
-    document.addEventListener('click', function (event) {
-        const innerClick = dropdown.contains(event.target) || input.contains(event.target);
-        if (!innerClick) hide();
-    });
 
 }
 
