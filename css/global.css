@@ -516,6 +516,12 @@ section .title:not(p) {
   text-align: center;
   justify-content: center;
 }
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
 
 .quality-control {
   display: flex;

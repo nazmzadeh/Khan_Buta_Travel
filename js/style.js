@@ -133,6 +133,7 @@ function handleSubmit(event) {
         values[key] = value;
     }
     console.log('Form data:', values);
+    form.submit()
 }
 form.addEventListener('submit', handleSubmit);
 

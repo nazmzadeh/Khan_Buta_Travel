@@ -7790,6 +7790,12 @@ ul.plan-features {
   border-top-left-radius: inherit;
   border-top-right-radius: inherit;
 }
+.contact_numbers a {
+  color: black;
+}
+.contact_numbers a:hover {
+  color: black;
+}
 .card .card-title a {
   color: black;
 }
@@ -7899,7 +7905,7 @@ ul.plan-features {
   font-size: 28px;
   font-weight: 700;
 }
-.tour_main .reservation button {
+.tour_main .reservation a {
   border-radius: 50px;
   height: 54px;
   padding-left: 2rem;
@@ -7908,10 +7914,15 @@ ul.plan-features {
   transition: 0.3s ease;
   background-color: #fc5b62;
   font-weight: 700;
-}
-.tour_main .reservation button a {
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+.tour_main .reservation a:hover {
+  background-color: #8b0000;
+}
+
 .tour_main .contact {
   padding: 12px;
 }
@@ -8614,6 +8625,10 @@ form .input-part select {
   transition: 0.3s ease;
   color: white;
   font-weight: 700;
+}
+.reservation .right-bar .reserve-buttons button:hover,
+.reservation .right-bar .reserve-buttons button .operator-self .btn:hover {
+  background-color: #8b0000;
 }
 .operator-contact {
   display: flex;
