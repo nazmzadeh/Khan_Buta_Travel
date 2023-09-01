@@ -512,7 +512,7 @@ p {
 /*---------------------------*\
   #Living room slider
 \*---------------------------*/
-section .title {
+section .title:not(p) {
   text-align: center;
   justify-content: center;
 }

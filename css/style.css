@@ -8524,6 +8524,46 @@ form .input-part select {
 .reservation .main-left-bar .form-bar-main .operators .btn span {
   font-weight: 700;
 }
+
+.operator-self {
+  display: flex;
+}
+.iti__country-list {
+  position: absolute;
+  z-index: 1000;
+}
+.price_part.input-part .price_text {
+  margin-bottom: 0;
+}
+.reservation .main-left-bar .form-bar-main .operators .btn.decrease {
+  border-radius: 5px 0 0 5px;
+  height: 48px;
+}
+.reservation .main-left-bar .form-bar-main .operators .btn.increase {
+  border-radius: 0 5px 5px 0;
+  height: 48px;
+}
+.reservation .main-left-bar .form-bar-main .operators .operator-self input {
+  height: 48px;
+}
+.reservation
+  .main-left-bar
+  .form-bar-main
+  .operators
+  .operator-self
+  input:focus {
+  /* border: none; */
+  outline: none;
+}
+.reservation .main-left-bar .form-bar-main .operators .btn.decrease:focus,
+.reservation .main-left-bar .form-bar-main .operators .btn.increase:focus {
+  box-shadow: none;
+}
+.g-control,
+.g-control .g-checkbox-part,
+.g-control label {
+  cursor: pointer;
+}
 .reservation .main-left-bar {
   width: calc(100% - 277px);
 }
@@ -9036,7 +9076,7 @@ form button:focus {
   display: block;
   content: "Browse";
   height: 100%;
-  padding: 0.5rem 1rem;
+  padding: 0.7rem 1rem;
   line-height: 1.5;
   color: white;
   font-weight: 500;
@@ -9294,6 +9334,9 @@ z.sorting.active span {
 }
 
 @media screen and (max-width: 778px) {
+  .results .results_wrapper .sort-row {
+    background-color: transparent;
+  }
   .sorting {
     display: none;
   }
@@ -9452,16 +9495,20 @@ z.sorting.active span {
 .circle-point {
   fill: rgb(186, 199, 213);
 }
+.load_more {
+  display: flex;
+  justify-content: center;
+}
 .load_more_btn {
-  height: 32px;
+  height: 40px;
   max-width: 100%;
+  width: 170px;
   background: #949494;
   border: 0px;
   padding: 7px 12px;
   font-weight: 600;
   font-size: 13px;
   cursor: pointer;
-  width: 100%;
   appearance: none;
   color: rgb(255, 255, 255);
   transition: all 0.2s ease-in-out 0s;
@@ -9593,7 +9640,7 @@ section.results {
   display: flex;
   justify-content: space-evenly;
   background: white;
-  width: 200px;
+  width: 180px;
 }
 #toggleButton:hover {
   background: rgb(229, 234, 239);
@@ -9613,6 +9660,11 @@ section.results {
 }
 .count-group {
   display: flex;
+}
+.count-group p {
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
 #customBox .count {
@@ -9704,9 +9756,7 @@ section.results {
 .row_drpdwn button {
   position: relative;
   display: flex;
-  -webkit-box-pack: justify;
   justify-content: center;
-  -webkit-box-align: center;
   align-items: center;
   box-sizing: border-box;
   text-align: center;
