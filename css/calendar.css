@@ -2329,3 +2329,23 @@ span.flatpickr-weekday {
 .calendar-time {
   display: none !important;
 }
+
+.s002 form .inner-form .input-field {
+  background: white;
+  display: flex;
+  height: 100%;
+}
+.s002 form .inner-form .input-field .icon-wrap {
+  position: relative;
+  height: auto;
+}
+.s002 form .inner-form .input-field input {
+  padding: 0;
+}
+
+.s002 form .inner-form .input-field div.icon-wrap {
+  justify-content: center;
+}
+div.btn-input {
+  padding: 10px 15px;
+}

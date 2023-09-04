@@ -9787,3 +9787,24 @@ section.results {
   appearance: none !important;
   transition: all 0.15s ease-in-out 0s !important;
 }
+
+.select-dropdown-list .select-dropdown-btn {
+  width: 100%;
+}
+
+form button:hover,
+form button:focus {
+  background-color: transparent;
+}
+form button[type="submit"] {
+  background-color: #8b0000;
+}
+.load_more {
+  justify-content: end;
+}
+#passenger_form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 25px;
+}

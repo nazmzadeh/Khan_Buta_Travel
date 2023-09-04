@@ -151,7 +151,9 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
                   <form method="get">
                     <!-- Search City -->
                     <div class="inner-form">
-                      <div class="input-field first-wrap position-relative">
+                      <div
+                        class="input-field first-wrap position-relative js-city-select-field"
+                      >
                         <div class="icon-wrap">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -168,11 +170,12 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
                           <input
                             id="search"
                             type="text"
-                            name="city"
-                            value="Istanbul IST"
-                            disabled
-                            placeholder="WHERE ARE YOU GOING?"
+                            name="city-from"
+                            placeholder="WHERE ARE YOU?"
                             class="js-city-select"
+                            autocomplete="off"
+                            readonly
+                            value="Baku"
                           />
                           <button
                             type="button"
@@ -180,6 +183,114 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
                           >
                             X
                           </button>
+                        </div>
+                        <div
+                          class="select-dropdown js-select-dropdown custom-scrollbar"
+                        >
+                          <div class="select-dropdown-list">
+                            <button
+                              class="select-dropdown-btn js-select-dropdown-btn"
+                              data-title="Baki"
+                              type="button"
+                            >
+                              <i class="fa fa-map-marker"></i> Baki
+                            </button>
+
+                            <button
+                              class="select-dropdown-btn js-select-dropdown-btn"
+                              data-title="Lankaran"
+                              type="button"
+                            >
+                              <i class="fa fa-map-marker"></i>
+                              Lankaran
+                            </button>
+
+                            <button
+                              class="select-dropdown-btn js-select-dropdown-btn"
+                              data-title="Guba"
+                              type="button"
+                            >
+                              <i class="fa fa-map-marker"></i>
+                              Guba
+                            </button>
+
+                            <p
+                              class="select-dropdown-not-found js-select-dropdown-not-found"
+                            >
+                              Uyğun bir şəhər tapılmadı
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="input-field first-wrap position-relative js-city-select-field"
+                      >
+                        <div class="icon-wrap">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                            ></path>
+                          </svg>
+                        </div>
+                        <div class="city-select-box">
+                          <input
+                            id="search"
+                            type="text"
+                            name="city-to"
+                            placeholder="WHERE ARE YOU GOING?"
+                            class="js-city-select"
+                            autocomplete="off"
+                            readonly
+                            value="Istanbul"
+                          />
+                          <button
+                            type="button"
+                            class="city-select-reset js-city-select-reset d-none"
+                          >
+                            X
+                          </button>
+                        </div>
+                        <div
+                          class="select-dropdown js-select-dropdown custom-scrollbar"
+                        >
+                          <div class="select-dropdown-list">
+                            <button
+                              class="select-dropdown-btn js-select-dropdown-btn"
+                              data-title="Istanbul"
+                              type="button"
+                            >
+                              <i class="fa fa-map-marker"></i> Istanbul
+                            </button>
+
+                            <button
+                              class="select-dropdown-btn js-select-dropdown-btn"
+                              data-title="Qebele"
+                              type="button"
+                            >
+                              <i class="fa fa-map-marker"></i>
+                              Qebele
+                            </button>
+
+                            <button
+                              class="select-dropdown-btn js-select-dropdown-btn"
+                              data-title="Ismayilli"
+                              type="button"
+                            >
+                              <i class="fa fa-map-marker"></i>
+                              Ismayilli
+                            </button>
+
+                            <p
+                              class="select-dropdown-not-found js-select-dropdown-not-found"
+                            >
+                              Uyğun bir şəhər tapılmadı
+                            </p>
+                          </div>
                         </div>
                       </div>
 
@@ -260,7 +371,7 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
                           d="m18.294 15.52.451.16c1.526.54 3.255 1.157 3.255 3.638V20a.4.4 0 0 1-.4.4h-3.01a.2.2 0 0 1-.199-.226c.008-.057.012-.116.012-.174v-1.2c0-3.682-2.533-4.875-4.48-5.595a.2.2 0 0 1-.114-.107 4.074 4.074 0 0 1-.206-.59.202.202 0 0 1 .034-.174 6.952 6.952 0 0 0 1.352-4.279.2.2 0 0 1 .119-.177A3.172 3.172 0 0 1 16.4 7.6a2.929 2.929 0 0 1 3.003 3.184 4.494 4.494 0 0 1-1.172 3.45c-.105.336-.12.695-.046 1.04a.47.47 0 0 0 .11.246Z"
                         ></path>
                       </svg>
-                      <span class="count">0</span>
+                      <span class="count">1</span>
                     </p>
                   </div>
                   <div class="count-group">
@@ -290,7 +401,7 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
                   </svg>
                 </div>
               </button>
-              <div id="customBox" class="hidden">
+              <form id="customBox" class="hidden">
                 <h5>Passengers</h5>
                 <div class="row-adults row_drpdwn">
                   <p>
@@ -309,7 +420,10 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
                     </span>
                   </p>
                   <div class="counts">
-                    <button class="decrease">
+                    <button
+                      class="decrease number-input-minus adult_decrease disabled"
+                      type="button"
+                    >
                       <svg
                         class="Icon__StyledIcon-sc-psgqgs-0 jIyban StepperStateless__StyledMinusIcon-sc-1nz7kdj-1 fGzrUL"
                         viewBox="0 0 24 24"
@@ -322,11 +436,12 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
                     </button>
                     <input
                       type="number"
-                      class="count_input"
-                      value="0"
+                      class="count_input count_input_adult"
+                      value="1"
+                      name="count_adults"
                       readonly
                     />
-                    <button class="increase">
+                    <button class="increase" type="button">
                       <svg
                         class="Icon__StyledIcon-sc-psgqgs-0 jIyban StepperStateless__StyledPlusIcon-sc-1nz7kdj-2 egwjtm"
                         viewBox="0 0 24 24"
@@ -359,7 +474,10 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
                     </span>
                   </p>
                   <div class="counts">
-                    <button class="decrease">
+                    <button
+                      class="decrease number-input-minus disabled"
+                      type="button"
+                    >
                       <svg
                         class="Icon__StyledIcon-sc-psgqgs-0 jIyban StepperStateless__StyledMinusIcon-sc-1nz7kdj-1 fGzrUL"
                         viewBox="0 0 24 24"
@@ -374,9 +492,10 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
                       type="number"
                       class="count_input"
                       value="0"
+                      name="count_children"
                       readonly
                     />
-                    <button class="increase">
+                    <button class="increase" type="button">
                       <svg
                         class="Icon__StyledIcon-sc-psgqgs-0 jIyban StepperStateless__StyledPlusIcon-sc-1nz7kdj-2 egwjtm"
                         viewBox="0 0 24 24"
@@ -404,7 +523,10 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
                     <span>Bags</span>
                   </p>
                   <div class="counts">
-                    <button class="decrease">
+                    <button
+                      class="decrease number-input-minus disabled"
+                      type="button"
+                    >
                       <svg
                         class="Icon__StyledIcon-sc-psgqgs-0 jIyban StepperStateless__StyledMinusIcon-sc-1nz7kdj-1 fGzrUL"
                         viewBox="0 0 24 24"
@@ -419,9 +541,10 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
                       type="number"
                       class="count_input"
                       value="0"
+                      name="count_baggages"
                       readonly
                     />
-                    <button class="increase">
+                    <button class="increase" type="button">
                       <svg
                         class="Icon__StyledIcon-sc-psgqgs-0 jIyban StepperStateless__StyledPlusIcon-sc-1nz7kdj-2 egwjtm"
                         viewBox="0 0 24 24"
@@ -435,10 +558,10 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
                   </div>
                 </div>
                 <div class="buttons">
-                  <button id="cancelButton">Cancel</button>
-                  <button id="doneButton">Done</button>
+                  <button id="cancelButton" type="button">Cancel</button>
+                  <button type="submit" id="doneButton">Done</button>
                 </div>
-              </div>
+              </form>
             </div>
             <div class="results_wrapper row">
               <div class="col-xl-12 col-md-12 col-row">
@@ -1172,8 +1295,6 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script src="./js/calendar/choices.js"></script>
-    <script src="./js/calendar/flatpickr.js"></script>
     <script src="./js/calendar/main.js"></script>
     <script type="text/javascript" src="./js/daterangepicker.js"></script>
     <script type="text/javascript" src="./js/range-data-picker.js"></script>

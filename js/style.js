@@ -122,20 +122,23 @@ function topFunction() {
 window.onscroll = function () { handleScroll() };
 toTopBtn.addEventListener("click", topFunction);
 
-const form = document.querySelector('main form');
+const forms = document.querySelectorAll('form');
 
-
-function handleSubmit(event) {
-    event.preventDefault();
-    const formData = new FormData(form);
-    const values = {};
-    for (const [key, value] of formData.entries()) {
-        values[key] = value;
+forms.forEach((form) => {
+    function handleSubmit(event) {
+        event.preventDefault();
+        const formData = new FormData(form);
+        const values = {};
+        for (const [key, value] of formData.entries()) {
+            values[key] = value;
+        }
+        console.log('Form data:', values);
+        form.submit()
     }
-    console.log('Form data:', values);
-    form.submit()
-}
-form.addEventListener('submit', handleSubmit);
+    form.addEventListener('submit', handleSubmit);
+})
+
+
 
 
 const phoneInputField = document.querySelectorAll(".telephone");
@@ -147,7 +150,6 @@ phoneInputField.forEach((phone) => {
     });
 })
 
-console.log(phoneInputField)
 
 const sortByOthers = document.querySelector(".sort_by_others ");
 const otherOptions = document.querySelector(".sort_part ul");
@@ -156,7 +158,6 @@ sortByOthers.onclick = () => {
     otherOptions.classList.toggle("visible")
 
 }
-console.log(otherOptions)
 
 document.addEventListener('DOMContentLoaded', function () {
     const openModalButton = document.querySelector('.openSortModalBtn');
@@ -196,7 +197,7 @@ const cancelButton = document.getElementById('cancelButton');
 const doneButton = document.getElementById('doneButton');
 const countSpans = document.querySelectorAll('.count');
 
-let tempCounts = [0, 0, 0];
+let tempCounts = [1, 0, 0];
 
 toggleButton.addEventListener('click', () => {
     customBox.classList.toggle('hidden');
@@ -216,19 +217,37 @@ doneButton.addEventListener('click', () => {
 });
 
 const decreaseButtons = document.querySelectorAll('.decrease');
+const adultDecreaseButton = document.querySelector('.adult_decrease');
 const increaseButtons = document.querySelectorAll('.increase');
 const countInputs = document.querySelectorAll('.count_input');
+const adultCountInp = document.querySelector('.count_input_adult');
+const childrenRow = document.querySelector('.row-children');
+
+
 
 for (let i = 0; i < decreaseButtons.length; i++) {
-    decreaseButtons[i].addEventListener('click', () => {
-        if (countInputs[i].value > 0) {
-            countInputs[i].value--;
-            tempCounts[i] = countInputs[i].value;
-        }
-    });
+
 
     increaseButtons[i].addEventListener('click', () => {
         countInputs[i].value++;
         tempCounts[i] = countInputs[i].value;
+
+        decreaseButtons[i].classList.remove("disabled")
+        decreaseButtons[i].removeAttribute("disabled")
+
     });
+    decreaseButtons[i].addEventListener('click', () => {
+        if (countInputs[i].value > 0) {
+            countInputs[i].value--;
+            tempCounts[i] = countInputs[i].value;
+
+        }
+        console.log(tempCounts[0])
+        if (parseInt(countInputs[0].value) <= 1) {
+            adultDecreaseButton.classList.add("disabled")
+            adultDecreaseButton.setAttribute("disabled", "")
+
+        }
+    });
+
 }

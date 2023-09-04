@@ -64,8 +64,6 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./css/calendar.css" />
-    <link rel="stylesheet" href="./css/global.css" />
   </head>
   <body>
     <div id="page">
@@ -174,6 +172,7 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
                             name="city-from"
                             placeholder="WHERE ARE YOU?"
                             class="js-city-select"
+                            autocomplete="off"
                           />
                           <button
                             type="button"
@@ -242,6 +241,7 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
                             name="city-to"
                             placeholder="WHERE ARE YOU GOING?"
                             class="js-city-select"
+                            autocomplete="off"
                           />
                           <button
                             type="button"
@@ -395,8 +395,8 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
 
                         <div class="position-relative my-dropdown-toggler">
                           <div class="w-100 btn-input">
-                            <span class="js-adults-count">2</span>,
-                            <span class="js-children-count ms-2">2</span>
+                            <span class="js-adults-count">1</span>,
+                            <span class="js-children-count ms-2">0</span>
                           </div>
                         </div>
 
@@ -408,12 +408,12 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
                               <h6 class="fw-bold fs-14px m-0">Adults</h6>
 
                               <div
-                                class="number-input js-number-input"
+                                class="number-input js-number-input js-adults-count"
                                 value-field=".js-adults-count"
                               >
                                 <button
                                   type="button"
-                                  class="number-input-minus js-number-input-minus"
+                                  class="number-input-minus js-number-input-minus disabled"
                                 >
                                   <i class="fa fa-minus"></i>
                                 </button>
@@ -422,7 +422,8 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
                                   type="text"
                                   readonly="true"
                                   name="group_adults"
-                                  min="2"
+                                  value="1"
+                                  max-value=""
                                   class="adult_input number-input-input js-number-input-input"
                                 />
 
@@ -435,19 +436,19 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
                               </div>
                             </div>
 
-                            <div
-                              class="js-number-input-with-additionals"
-                              value-field=".js-children-count"
-                            >
+                            <div class="js-number-input-with-additionals">
                               <div
-                                class="d-flex align-items-center mt-2 justify-content-between"
+                                class="d-flex align-items-center mt-2 justify-content-between children-part"
                               >
                                 <h6 class="fw-bold fs-14px m-0">Children</h6>
 
-                                <div class="number-input">
+                                <div
+                                  class="number-input js-number-input js-children-count"
+                                  value-field=".js-children-count"
+                                >
                                   <button
                                     type="button"
-                                    class="number-input-minus js-number-input-minus children-btn"
+                                    class="number-input-minus js-number-input-minus children-btn disabled"
                                   >
                                     <i class="fa fa-minus"></i>
                                   </button>
@@ -456,8 +457,9 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
                                     type="text"
                                     readonly="true"
                                     name="group_children"
-                                    value="2"
-                                    class="number-input-input js-number-input-input"
+                                    value="0"
+                                    max-value=""
+                                    class="children_input number-input-input js-number-input-input"
                                   />
 
                                   <button
@@ -471,65 +473,7 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
 
                               <div
                                 class="row gx-0 mx-auto w-100 justify-content-between js-number-input-additionals-parent"
-                              >
-                                <div
-                                  class="my-col-5 mt-2 js-number-input-additionals-select"
-                                >
-                                  <select
-                                    name="age_1"
-                                    class="w-100 white-select"
-                                    value="0"
-                                  >
-                                    <option value="0">0 years old</option>
-                                    <option value="1">1 years old</option>
-                                    <option value="2">2 years old</option>
-                                    <option value="3">3 years old</option>
-                                    <option value="4">4 years old</option>
-                                    <option value="5">5 years old</option>
-                                    <option value="6">6 years old</option>
-                                    <option value="7">7 years old</option>
-                                    <option value="8">8 years old</option>
-                                    <option value="9">9 years old</option>
-                                    <option value="10">10 years old</option>
-                                    <option value="11">11 years old</option>
-                                    <option value="12">12 years old</option>
-                                    <option value="13">13 years old</option>
-                                    <option value="14">14 years old</option>
-                                    <option value="15">15 years old</option>
-                                    <option value="16">16 years old</option>
-                                    <option value="17">17 years old</option>
-                                  </select>
-                                </div>
-
-                                <div
-                                  class="my-col-5 mt-2 js-number-input-additionals-select"
-                                >
-                                  <select
-                                    name="age_2"
-                                    class="w-100 white-select"
-                                    value="0"
-                                  >
-                                    <option value="0">0 years old</option>
-                                    <option value="1">1 years old</option>
-                                    <option value="2">2 years old</option>
-                                    <option value="3">3 years old</option>
-                                    <option value="4">4 years old</option>
-                                    <option value="5">5 years old</option>
-                                    <option value="6">6 years old</option>
-                                    <option value="7">7 years old</option>
-                                    <option value="8">8 years old</option>
-                                    <option value="9">9 years old</option>
-                                    <option value="10">10 years old</option>
-                                    <option value="11">11 years old</option>
-                                    <option value="12">12 years old</option>
-                                    <option value="13">13 years old</option>
-                                    <option value="14">14 years old</option>
-                                    <option value="15">15 years old</option>
-                                    <option value="16">16 years old</option>
-                                    <option value="17">17 years old</option>
-                                  </select>
-                                </div>
-                              </div>
+                              ></div>
                             </div>
                           </div>
 
@@ -655,8 +599,6 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
     <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
     <script src="https://mreq.github.io/slick-lightbox/dist/slick-lightbox.js"></script>
     <script src="./js/searchTicket.js"></script>
-    <script src="./js/calendar/choices.js"></script>
-    <script src="./js/calendar/flatpickr.js"></script>
     <script src="./js/calendar/main.js"></script>
     <script type="text/javascript" src="./js/daterangepicker.js"></script>
     <script type="text/javascript" src="./js/range-data-picker.js"></script>

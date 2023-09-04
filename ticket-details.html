@@ -64,8 +64,6 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./css/calendar.css" />
-    <link rel="stylesheet" href="./css/global.css" />
   </head>
   <body>
     <div id="page">
@@ -285,7 +283,7 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
           <div class="row">
             <div class="col-xl-8 col-sm-12">
               <div class="myContainer">
-                <div class="results_list">
+                <section class="results_list">
                   <div class="list padding">
                     <div class="ticket">
                       <div class="itinerary_title">
@@ -465,7 +463,72 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
                       </div>
                     </div>
                   </div>
-                </div>
+                </section>
+                <section class="passenger_info">
+                  <form id="passenger_form" method="get">
+                    <div class="myRow">
+                      <div class="name part input-part">
+                        <label for="name">Given names</label>
+                        <input type="text" name="name" required />
+                      </div>
+                      <div class="surname part input-part">
+                        <label for="surname">Surnames</label>
+                        <input type="text" name="surname" required />
+                      </div>
+                    </div>
+                    <div class="nationality myRow">
+                      <div class="part input-part">
+                        <div class="nationality part input-part">
+                          <label for="nationality">Nationality</label>
+                          <div>
+                            <select name="nationality" required>
+                              <option>Select the natinality</option>
+                              <option value="Azerbaijan">Azerbaijan</option>
+                              <option value="Pakistan">Pakistan</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="sex part input-part">
+                          <label for="sex">Sex</label>
+                          <select name="sex" id="sex" required>
+                            <option>Select sex</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="part input-part">
+                        <label for="birthDate">Date of Birth</label>
+                        <input
+                          type="date"
+                          id="birthDate"
+                          name="birthDate"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="myRow">
+                      <div class="phone_number part input-part">
+                        <label for="phone-number">Phone number</label>
+                        <div>
+                          <input
+                            id="phone-number"
+                            type="tel"
+                            name="phone-number"
+                            class="telephone"
+                          />
+                        </div>
+                      </div>
+                      <div class="price_part input-part">
+                        <p class="price_text">Price:</p>
+                        <span class="price">$3000</span>
+                      </div>
+                    </div>
+                    <div class="buttons">
+                      <button type="submit" class="form-control">Submit</button>
+                    </div>
+                  </form>
+                </section>
               </div>
             </div>
             <div class="col-xl-4 col-sm-12">
@@ -605,8 +668,6 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script src="./js/calendar/choices.js"></script>
-    <script src="./js/calendar/flatpickr.js"></script>
     <script src="./js/calendar/main.js"></script>
     <script type="text/javascript" src="./js/daterangepicker.js"></script>
     <script type="text/javascript" src="./js/range-data-picker.js"></script>

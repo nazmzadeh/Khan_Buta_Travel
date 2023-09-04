@@ -1712,3 +1712,7 @@ a:hover {
 }
 
 /* the-end-of-new */
+
+footer a {
+  text-decoration: none;
+}
