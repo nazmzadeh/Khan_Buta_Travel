@@ -1,9 +1,3 @@
-// my-modal
-
-
-
-// the-end-of-my-modal
-
 
 /*------------Menu---------------*/
 
@@ -25,49 +19,6 @@ const navbar = () => {
 
 // navbar();
 
-
-/*------------Reservation---------------*/
-
-
-// the-end-of-number-input-with-additionals
-
-
-
-// others
-
-// const noneBtn = document.querySelector('.js-none-btn');
-// const weekendBtn = document.querySelector('.js-weekend-btn');
-// const weekBtn = document.querySelector('.js-week-btn');
-// // const customBtn = document.querySelector('.js-custom-btn');
-// const customBox = document.querySelector('.js-custom-box');
-
-// // customBtn.addEventListener('click', () => { customBox.classList.add('show'); })
-// // noneBtn.addEventListener('click', () => { customBox.classList.remove('show'); })
-// weekendBtn.addEventListener('click', () => { customBox.classList.remove('show'); })
-// weekBtn.addEventListener('click', () => { customBox.classList.remove('show'); })
-
-// const prefferedMonthsInput = document.querySelector('.js-preffered-months-input');
-// const prefferedMonthsButtons = document.querySelectorAll('.js-preffered-months-btn');
-
-// function changePrefferedMonths() {
-
-//     const inp = this.querySelector('input');
-//     const val = inp.value;
-//     const prefValue = prefferedMonthsInput.value;
-
-//     if (prefValue.includes(val)) {
-//         const arr = prefValue.split(',').filter(item => item !== val);
-//         prefferedMonthsInput.value = arr.join(',');
-//     } else {
-//         if (prefValue == "" || !prefValue) prefferedMonthsInput.value = val;
-//         else prefferedMonthsInput.value += `,${val}`;
-//     }
-
-// }
-
-// prefferedMonthsButtons.forEach((p) => { p.addEventListener('change', changePrefferedMonths) })
-
-// the-end-of-others
 
 
 
@@ -251,3 +202,19 @@ for (let i = 0; i < decreaseButtons.length; i++) {
     });
 
 }
+const noExpiration = document.querySelector("#no-expiration");
+const expirationDate = document.querySelector("#expiration_date");
+
+noExpiration.addEventListener("change", () => {
+
+    console.log("A", noExpiration.checked)
+    console.log("B", noExpiration.classList)
+    if (noExpiration.checked) {
+        expirationDate.disabled = true;
+        expirationDate.style.cursor = "not-allowed";
+    } else {
+        expirationDate.disabled = false;
+        expirationDate.style.cursor = "pointer";
+    }
+})
+

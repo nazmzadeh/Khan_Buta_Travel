@@ -464,67 +464,111 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
                     </div>
                   </div>
                 </section>
-                <section class="passenger_info">
+                <section class="registration">
+                  <div class="title">
+                    <h5>Primary passenger</h5>
+                  </div>
                   <form id="passenger_form" method="get">
-                    <div class="myRow">
-                      <div class="name part input-part">
-                        <label for="name">Given names</label>
-                        <input type="text" name="name" required />
+                    <div class="passenger">
+                      <div class="myRow">
+                        <div class="name part input-part">
+                          <label for="name">Given names</label>
+                          <input type="text" name="name" required />
+                        </div>
+                        <div class="surname part input-part">
+                          <label for="surname">Surnames</label>
+                          <input type="text" name="surname" required />
+                        </div>
                       </div>
-                      <div class="surname part input-part">
-                        <label for="surname">Surnames</label>
-                        <input type="text" name="surname" required />
-                      </div>
-                    </div>
-                    <div class="nationality myRow">
-                      <div class="part input-part">
-                        <div class="nationality part input-part">
-                          <label for="nationality">Nationality</label>
-                          <div>
-                            <select name="nationality" required>
-                              <option>Select the natinality</option>
-                              <option value="Azerbaijan">Azerbaijan</option>
-                              <option value="Pakistan">Pakistan</option>
+                      <div class="nationality_row myRow">
+                        <div class="part input-part nat_sex">
+                          <div class="nationality part input-part">
+                            <label for="nationality">Nationality</label>
+                            <div>
+                              <select name="nationality" required>
+                                <option>Select the nationality</option>
+                                <option value="Azerbaijan">Azerbaijan</option>
+                                <option value="Pakistan">Pakistan</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="sex part input-part">
+                            <label for="sex">Sex</label>
+                            <select name="sex" id="sex" required>
+                              <option>Select sex</option>
+                              <option value="Male">Male</option>
+                              <option value="Female">Female</option>
                             </select>
                           </div>
                         </div>
-                        <div class="sex part input-part">
-                          <label for="sex">Sex</label>
-                          <select name="sex" id="sex" required>
-                            <option>Select sex</option>
-                            <option value="Male">Male</option>
-                            <option value="Female">Female</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="part input-part">
-                        <label for="birthDate">Date of Birth</label>
-                        <input
-                          type="date"
-                          id="birthDate"
-                          name="birthDate"
-                          required
-                        />
-                      </div>
-                    </div>
-                    <div class="myRow">
-                      <div class="phone_number part input-part">
-                        <label for="phone-number">Phone number</label>
-                        <div>
+                        <div class="part input-part">
+                          <label for="birthDate">Date of Birth</label>
                           <input
-                            id="phone-number"
-                            type="tel"
-                            name="phone-number"
-                            class="telephone"
+                            type="date"
+                            id="birthDate"
+                            name="birthDate"
+                            required
                           />
                         </div>
                       </div>
-                      <div class="price_part input-part">
-                        <p class="price_text">Price:</p>
-                        <span class="price">$3000</span>
+                      <div class="myRow">
+                        <div class="passport_id part input-part">
+                          <label for="id">Passport or ID number</label>
+                          <input type="text" name="id" required />
+                        </div>
+                        <div class="part input-part">
+                          <label for="expiration_date"
+                            >Passport or ID expiration date</label
+                          >
+                          <input
+                            type="date"
+                            id="expiration_date"
+                            name="expiration_date"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div class="myRow exp-row">
+                        <div class="no-expiration">
+                          <input type="checkbox" id="no-expiration" />
+                          <label for="no-expiration">No expiration</label>
+                        </div>
                       </div>
                     </div>
-                    <div class="buttons">
+                    <div class="baggages">
+                      <h5>Cabin or carry-on baggage</h5>
+                      <div class="frame">
+                        <span class="popular">Popular</span>
+                        <p>Carry-on bundle</p>
+                        <p class="small_text">
+                          1× personal item (5 kg) + 1× cabin bag (10 kg)
+                        </p>
+                        <div class="bags">
+                          <div class="backpack_bag bag">
+                            <img src="./img/personal-backpack.jpg" alt="bag" />
+                            <span class="small_text">35 × 20 × 20 c</span>
+                          </div>
+                          <div class="cabin_bag bag">
+                            <img src="./img/cabinbag.jpg" alt="bag" />
+                            <span class="small_text">55 × 23 × 40 cm</span>
+                          </div>
+                        </div>
+                        <div class="included">
+                          <span
+                            ><svg
+                              class="Icon__StyledIcon-sc-psgqgs-0 etxBjy"
+                              viewBox="0 0 24 24"
+                              preserveAspectRatio="xMidYMid meet"
+                            >
+                              <path
+                                d="M6.445 12.668a.9.9 0 1 0-1.302 1.242l3.572 3.745a.9.9 0 0 0 1.335-.036l8.591-10.037a.9.9 0 0 0-1.367-1.17l-7.598 8.876a.48.48 0 0 1-.712.02l-2.519-2.64Z"
+                              ></path></svg
+                          ></span>
+                          <span>Included</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="buttons passenger_form_btn">
                       <button type="submit" class="form-control">Submit</button>
                     </div>
                   </form>
@@ -668,7 +712,6 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script src="./js/calendar/main.js"></script>
     <script type="text/javascript" src="./js/daterangepicker.js"></script>
     <script type="text/javascript" src="./js/range-data-picker.js"></script>
     <script src="js/common_scripts.js"></script>

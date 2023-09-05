@@ -9802,9 +9802,112 @@ form button[type="submit"] {
 .load_more {
   justify-content: end;
 }
-#passenger_form {
+#passenger_form .passenger {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  margin-top: 25px;
+  padding-top: 25px;
+}
+
+form .nat_sex {
+  flex-direction: row;
+  width: auto;
+  gap: 8px;
+}
+form .nationality {
+  width: 228px;
+}
+
+form .passenger_form_btn,
+.exp-row {
+  padding-right: 20px;
+}
+
+#passenger_form .myRow {
+  justify-content: space-evenly;
+  gap: 18px;
+}
+#passenger_form .exp-row {
+  justify-content: end;
+}
+@media screen and (max-width: 1400px) {
+  form .nat_sex {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 770px) {
+  form .nat_sex {
+    flex-direction: column;
+    width: 100%;
+  }
+  form .nationality {
+    width: 100%;
+  }
+}
+form button[type="submit"] {
+  background: #fc5b62;
+}
+form button[type="submit"]:hover {
+  background: #8b0000;
+}
+
+#passenger_form input[type="checkbox"] {
+  accent-color: #fc5b62;
+}
+.no-expiration {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.registration h4 {
+  font-weight: 600;
+}
+#passenger_form .frame {
+  border: 1px solid #fc5b62;
+  padding: 15px;
+  position: relative;
+}
+.frame .popular {
+  background-color: #fc5b62;
+  padding: 5px;
+  font-weight: 600;
+  font-size: 12px;
+  border-radius: 12px;
+  color: white;
+  position: absolute;
+  top: -15px;
+  right: 45%;
+}
+.baggages svg {
+  width: 20px;
+  height: 20px;
+}
+.baggages .frame {
+  text-align: center;
+}
+.baggages .bags {
+  display: flex;
+  justify-content: center;
+}
+.baggages .bag {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.baggages .bag span {
+  font-size: 13px;
+}
+
+#passenger_form .small_text {
+  font-size: 13px;
+}
+
+.bags img {
+  width: 115px;
+  height: 165px;
+}
+.included {
+  display: flex;
+  padding: 7px;
 }

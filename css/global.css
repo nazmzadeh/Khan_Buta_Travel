@@ -1716,3 +1716,10 @@ a:hover {
 footer a {
   text-decoration: none;
 }
+form input,
+form select {
+  cursor: pointer;
+}
+.disabled_input {
+  cursor: not-allowed;
+}
