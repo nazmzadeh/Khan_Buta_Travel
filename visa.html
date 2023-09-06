@@ -173,7 +173,6 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
           <section class="visa-form">
             <div class="title">
               <h2>Visa application form</h2>
-
             </div>
             <div class="steps">
               <span class="circle active">1</span>
@@ -206,6 +205,7 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
                   <p class="quest_title">Number of entries</p>
                   <div class="answer">
                     <input
+                      autocomplete="off"
                       type="radio"
                       id="entry"
                       name="entry"
@@ -217,8 +217,8 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
                 </div>
                 <div class="buttons">
                   <button
+                    type="button"
                     class="next-button col-sm-6 form-control"
-                    type="submit"
                   >
                     Next
                   </button>
@@ -232,9 +232,10 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
                     <option value="tourism">Tourism</option>
                   </select>
                 </div>
-                <div class="part input-part">
+                <div class="part input-part visa_validity_date">
                   <label for="date">Starting date of e-visa validity</label>
                   <input
+                    autocomplete="off"
                     type="date"
                     id="date"
                     name="Starting date of e-visa validity"
@@ -247,6 +248,7 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
                   <div class="answers">
                     <div class="answer">
                       <input
+                        autocomplete="off"
                         type="radio"
                         id="standard"
                         name="consideration"
@@ -259,6 +261,7 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
                     </div>
                     <div class="answer">
                       <input
+                        autocomplete="off"
                         type="radio"
                         id="urgent"
                         name="consideration"
@@ -324,7 +327,7 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
                   <button type="button" class="prev-button form-control">
                     Previous
                   </button>
-                  <button class="next-button form-control" type="submit">
+                  <button type="button" class="next-button form-control">
                     Next
                   </button>
                 </div>
@@ -332,15 +335,36 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
               <div class="form-step" data-step="3">
                 <div class="surname part input-part">
                   <label for="surname">Surname</label>
-                  <input type="text" id="surname" name="surname" required />
+                  <input
+                    autocomplete="off"
+                    autocomplete="off"
+                    type="text"
+                    id="surname"
+                    name="surname"
+                    required
+                  />
                 </div>
                 <div class="given_name part input-part">
                   <label for="givenName">Other names/Given name(s)</label>
-                  <input type="text" id="givenName" name="givenName" required />
+                  <input
+                    autocomplete="off"
+                    autocomplete="off"
+                    type="text"
+                    id="givenName"
+                    name="givenName"
+                    required
+                  />
                 </div>
                 <div class="part input-part">
                   <label for="birthDate">Date of Birth</label>
-                  <input type="date" id="birthDate" name="birthDate" required />
+                  <input
+                    autocomplete="off"
+                    autocomplete="off"
+                    type="date"
+                    id="birthDate"
+                    name="birthDate"
+                    required
+                  />
                 </div>
                 <div class="birthPlace part input-part">
                   <label for="birthPlace">Country of birth</label>
@@ -368,6 +392,7 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
                 <div class="phone_number part input-part">
                   <label for="phone-number">Phone number</label>
                   <input
+                    autocomplete="off"
                     id="phone-number"
                     type="tel"
                     name="phone-number"
@@ -377,6 +402,7 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
                 <div class="mobile_number part input-part">
                   <label for="mobile-number">Mobile number</label>
                   <input
+                    autocomplete="off"
                     id="mobile-number"
                     type="tel"
                     name="mobile-number"
@@ -388,6 +414,7 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
                     >Permanent residence address</label
                   >
                   <input
+                    autocomplete="off"
                     type="text"
                     name="permanent-residence-address"
                     id="permanent-residence-address"
@@ -396,11 +423,19 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
                 </div>
                 <div class="email part input-part">
                   <label for="email">Email</label>
-                  <input type="email" id="email" name="email" required />
+                  <input
+                    autocomplete="off"
+                    autocomplete="off"
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                  />
                 </div>
                 <div class="passport_number part input-part">
                   <label for="passport-number">Passport number</label>
                   <input
+                    autocomplete="off"
                     type="text"
                     id="passport-number"
                     name="passport-number"
@@ -410,6 +445,7 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
                 <div class="part input-part passport_issue_date">
                   <label for="issue-date">Passport issue date</label>
                   <input
+                    autocomplete="off"
                     type="date"
                     id="issue-date"
                     name="issue-date"
@@ -419,6 +455,7 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
                 <div class="part input-part passport_expiry_date">
                   <label for="expiry -date">Passport expiry date</label>
                   <input
+                    autocomplete="off"
                     type="date"
                     id="expiry -date"
                     name="expiry-date"
@@ -430,6 +467,7 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
                     >Address of accommodation in Azerbaijan</label
                   >
                   <input
+                    autocomplete="off"
                     type="text"
                     id="accomodation"
                     name="accomodation"
@@ -439,6 +477,7 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
                 <div class="passport_copy part input-part">
                   <label for="passport-copy">Copy of the passport</label>
                   <input
+                    autocomplete="off"
                     type="file"
                     name="passport copy"
                     id="passport-copy"
@@ -462,6 +501,7 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
                   <div class="answers">
                     <div class="answer">
                       <input
+                        autocomplete="off"
                         type="radio"
                         id="noRadio"
                         name="permission"
@@ -472,6 +512,7 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
                     </div>
                     <div class="answer">
                       <input
+                        autocomplete="off"
                         type="radio"
                         id="yesRadio"
                         class="radio_input"
@@ -483,30 +524,45 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
                   </div>
                 </div>
                 <div class="buttons">
-                  <button class="prev-button col-sm-6 form-control">
+                  <button
+                    type="button"
+                    class="prev-button col-sm-6 form-control"
+                  >
                     Previous
                   </button>
                   <button
+                    type="button"
                     class="next-button col-sm-6 form-control"
-                    type="submit"
                   >
                     Next
                   </button>
                 </div>
               </div>
               <div class="form-step" data-step="4">
-                <div class="part payment">
-                  <label for="payment"></label>
-                    <span>Amount:</span>
+                <div class="pricing-plan-wrap">
+                  <div class="pricing-plan-header">
+                    <h3>Amount</h3>
+                    <div class="price-holder">
+                      <p class="amount">$50</p>
+                    </div>
+                  </div>
+                  <a href="#" class="pay_btn btn btn-custom">Pay now</a>
+                </div>
+                <!-- <div class="part payment">
+                  <label for="payment">
+                    <span class="amount_text">Amount:</span>
                     <span class="amount"> &ensp; 50.00 AZN</span></label
                   >
                   <a href="#" class="pay_btn">Pay now</a>
-                </div>
+                </div> -->
                 <div class="buttons">
-                  <button class="prev-button col-sm-6 form-control">
+                  <button
+                    type="button"
+                    class="prev-button col-sm-6 form-control"
+                  >
                     Previous
                   </button>
-                  <button type="submit" class="form-control">Submit</button>
+                  <!-- <button type="submit" class="form-control">Submit</button> -->
                 </div>
               </div>
             </form>
@@ -569,18 +625,19 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
                 <div id="message-newsletter">
                   <form
                     method="post"
-                    action="phpmailer/newsletter_template_email.php"
                     name="newsletter_form"
                     id="newsletter_form"
                   >
                     <div class="form-group">
                       <input
+                        autocomplete="off"
                         type="email"
                         name="email_newsletter"
                         id="email_newsletter"
                         class="form-control"
                       />
                       <input
+                        autocomplete="off"
                         type="submit"
                         value="Submit"
                         id="submit-newsletter"

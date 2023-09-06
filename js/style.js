@@ -105,30 +105,40 @@ phoneInputField.forEach((phone) => {
 const sortByOthers = document.querySelector(".sort_by_others ");
 const otherOptions = document.querySelector(".sort_part ul");
 
-sortByOthers.onclick = () => {
+
+
+if (sortByOthers) sortByOthers.onclick = () => {
     otherOptions.classList.toggle("visible")
 
 }
 
+
 document.addEventListener('DOMContentLoaded', function () {
     const openModalButton = document.querySelector('.openSortModalBtn');
     const closeModalButton = document.getElementById('closeModalButton');
+    const overlay = document.getElementById('overlay');
     const sortingModal = document.getElementById('sortingModal');
     const sortingRadios = document.querySelectorAll('input[name="sorting"]');
     const sortTitles = document.querySelectorAll('.sort_title');
 
-    openModalButton.addEventListener('click', function () {
-        sortingModal.classList.toggle('show');
-        overlay.classList.toggle('show');
-    });
-    closeModalButton.addEventListener('click', function () {
-        sortingModal.classList.remove('show');
-        overlay.classList.remove('show');
-    });
-    overlay.addEventListener('click', function () {
-        sortingModal.classList.remove('show');
-        overlay.classList.remove('show');
-    });
+    if (openModalButton) {
+        openModalButton.addEventListener('click', function () {
+            sortingModal.classList.toggle('show');
+            overlay.classList.toggle('show');
+        })
+    };
+    if (closeModalButton) {
+        closeModalButton.addEventListener('click', function () {
+            sortingModal.classList.remove('show');
+            overlay.classList.remove('show');
+        })
+    };
+    if (overlay) {
+        overlay.addEventListener('click', function () {
+            sortingModal.classList.remove('show');
+            overlay.classList.remove('show');
+        })
+    };
     sortingRadios.forEach(function (radio) {
         radio.addEventListener('change', function () {
             const selectedText = radio.previousElementSibling.firstElementChild.textContent;
@@ -137,9 +147,12 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     const defaultRadio = document.querySelector('input[name="sorting"][value="best"]');
-    defaultRadio.checked = true;
-    const defaultText = defaultRadio.nextElementSibling.previousElementSibling.firstElementChild.textContent;
-    openModalButton.querySelector('span').textContent = defaultText;
+    if (defaultRadio) {
+        defaultRadio.checked = true;
+        const defaultText = defaultRadio.nextElementSibling.previousElementSibling.firstElementChild.textContent;
+        if (defaultText) { openModalButton.querySelector('span').textContent = defaultText; }
+    }
+
 });
 
 const toggleButton = document.getElementById('toggleButton');
@@ -150,22 +163,28 @@ const countSpans = document.querySelectorAll('.count');
 
 let tempCounts = [1, 0, 0];
 
-toggleButton.addEventListener('click', () => {
-    customBox.classList.toggle('hidden');
-});
+if (toggleButton) {
+    toggleButton.addEventListener('click', () => {
+        customBox.classList.toggle('hidden');
+    })
+};
 
-cancelButton.addEventListener('click', () => {
-    customBox.classList.add('hidden');
-});
+if (cancelButton) {
+    cancelButton.addEventListener('click', () => {
+        customBox.classList.add('hidden');
+    })
+};
 
-doneButton.addEventListener('click', () => {
-    customBox.classList.add('hidden');
-    for (let i = 0; i < countSpans.length; i++) {
-        const totalPeopleCount = parseInt(tempCounts[0]) + parseInt(tempCounts[1]);
-        countSpans[0].textContent = totalPeopleCount;
-        countSpans[1].textContent = tempCounts[2]
-    }
-});
+if (doneButton) {
+    doneButton.addEventListener('click', () => {
+        customBox.classList.add('hidden');
+        for (let i = 0; i < countSpans.length; i++) {
+            const totalPeopleCount = parseInt(tempCounts[0]) + parseInt(tempCounts[1]);
+            countSpans[0].textContent = totalPeopleCount;
+            countSpans[1].textContent = tempCounts[2]
+        }
+    })
+};
 
 const decreaseButtons = document.querySelectorAll('.decrease');
 const adultDecreaseButton = document.querySelector('.adult_decrease');
@@ -202,19 +221,19 @@ for (let i = 0; i < decreaseButtons.length; i++) {
     });
 
 }
+
+
 const noExpiration = document.querySelector("#no-expiration");
 const expirationDate = document.querySelector("#expiration_date");
 
-noExpiration.addEventListener("change", () => {
-
-    console.log("A", noExpiration.checked)
-    console.log("B", noExpiration.classList)
-    if (noExpiration.checked) {
-        expirationDate.disabled = true;
-        expirationDate.style.cursor = "not-allowed";
-    } else {
-        expirationDate.disabled = false;
-        expirationDate.style.cursor = "pointer";
-    }
-})
-
+if (noExpiration && expirationDate) {
+    noExpiration.addEventListener("change", () => {
+        if (noExpiration.checked) {
+            expirationDate.disabled = true;
+            expirationDate.style.cursor = "not-allowed";
+        } else {
+            expirationDate.disabled = false;
+            expirationDate.style.cursor = "pointer";
+        }
+    })
+};

@@ -339,12 +339,12 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
                               <img
                                 alt="Turkish Airlines"
                                 title="Turkish Airlines"
-                                src="//images.kiwi.com/airlines/32x32/TK.png?default=airline.png"
+                                src="./img/TK.jpg"
                               />
                               <img
                                 alt="Buta Airways"
                                 title="Buta Airways"
-                                src="//images.kiwi.com/airlines/32x32/BUTAAIR.png?default=airline.png"
+                                src="./img/BUTAAIR.png"
                               />
                               <span>1 stop</span>
                             </p>
@@ -430,12 +430,12 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
                               <img
                                 alt="Turkish Airlines"
                                 title="Turkish Airlines"
-                                src="//images.kiwi.com/airlines/32x32/TK.png?default=airline.png"
+                                src="./img/TK.jpg"
                               />
                               <img
                                 alt="Buta Airways"
                                 title="Buta Airways"
-                                src="//images.kiwi.com/airlines/32x32/BUTAAIR.png?default=airline.png"
+                                src="./img/BUTAAIR.png"
                               />
                               <span>1 stop</span>
                             </p>
@@ -465,9 +465,7 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
                   </div>
                 </section>
                 <section class="registration">
-                  <div class="title">
-                    <h5>Primary passenger</h5>
-                  </div>
+                  <h5>Primary passenger</h5>
                   <form id="passenger_form" method="get">
                     <div class="passenger">
                       <div class="myRow">
@@ -539,7 +537,7 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
                       <h5>Cabin or carry-on baggage</h5>
                       <div class="frame">
                         <span class="popular">Popular</span>
-                        <p>Carry-on bundle</p>
+                        <p class="main_text">Carry-on bundle</p>
                         <p class="small_text">
                           1× personal item (5 kg) + 1× cabin bag (10 kg)
                         </p>
@@ -554,20 +552,30 @@ https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
                           </div>
                         </div>
                         <div class="included">
-                          <span
-                            ><svg
-                              class="Icon__StyledIcon-sc-psgqgs-0 etxBjy"
-                              viewBox="0 0 24 24"
-                              preserveAspectRatio="xMidYMid meet"
-                            >
-                              <path
-                                d="M6.445 12.668a.9.9 0 1 0-1.302 1.242l3.572 3.745a.9.9 0 0 0 1.335-.036l8.591-10.037a.9.9 0 0 0-1.367-1.17l-7.598 8.876a.48.48 0 0 1-.712.02l-2.519-2.64Z"
-                              ></path></svg
-                          ></span>
-                          <span>Included</span>
+                          <div class="included_container">
+                            <span
+                              ><svg
+                                class="Icon__StyledIcon-sc-psgqgs-0 etxBjy"
+                                viewBox="0 0 24 24"
+                                preserveAspectRatio="xMidYMid meet"
+                              >
+                                <path
+                                  d="M6.445 12.668a.9.9 0 1 0-1.302 1.242l3.572 3.745a.9.9 0 0 0 1.335-.036l8.591-10.037a.9.9 0 0 0-1.367-1.17l-7.598 8.876a.48.48 0 0 1-.712.02l-2.519-2.64Z"
+                                ></path></svg
+                            ></span>
+                            <span>Included</span>
+                          </div>
                         </div>
                       </div>
                     </div>
+                    <!-- <div class="checked_baggages">
+                      <h5>Checked baggage</h5>
+                      <p class="summary">
+                        Different airlines have different limits on baggage
+                        size, so we’re showing you the maximum allowed size for
+                        your itinerary.
+                      </p>
+                    </div> -->
                     <div class="buttons passenger_form_btn">
                       <button type="submit" class="form-control">Submit</button>
                     </div>

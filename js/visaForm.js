@@ -37,18 +37,42 @@ function showStep(stepIndex) {
 }
 
 
-
+const standard = document.querySelector("#multi-step-form #standard");
+const urgent = document.querySelector("#multi-step-form #urgent");
+const visaValidityDate = document.querySelector("#multi-step-form .visa_validity_date")
 const today = new Date();
-const issueDate = new Date(today);
-issueDate.setDate(today.getDate() + 4);
-const year = issueDate.getFullYear();
-const month = (issueDate.getMonth() + 1).toString().padStart(2, '0');
-const day = issueDate.getDate().toString().padStart(2, '0');
-const issueDateString = `${year}-${month}-${day}`;
+let issueDate = new Date(today);
+standard.addEventListener("change", () => {
 
-const dateInput = document.querySelector('.visaValidity');
-dateInput.value = issueDateString;
-dateInput.min = issueDateString;
+    if (standard.checked) {
+        issueDate = new Date(today);
+        issueDate.setDate(today.getDate() + 4);
+        updateDateInput(issueDate);
+        visaValidityDate.style.display = "flex"
+    }
+});
+
+urgent.addEventListener("change", () => {
+    if (urgent.checked) {
+        issueDate = new Date(today);
+        issueDate.setDate(today.getDate());
+        updateDateInput(issueDate);
+        visaValidityDate.style.display = "flex"
+    }
+});
+
+function updateDateInput(issueDate) {
+    const year = issueDate.getFullYear();
+    const month = (issueDate.getMonth() + 1).toString().padStart(2, '0');
+    const day = issueDate.getDate().toString().padStart(2, '0');
+    const issueDateString = `${year}-${month}-${day}`;
+
+    const dateInput = document.querySelector('.visaValidity');
+    dateInput.value = issueDateString;
+    dateInput.min = issueDateString;
+}
+
+
 
 function init() {
     updateProgressBar();

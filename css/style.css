@@ -9847,7 +9847,8 @@ form .passenger_form_btn,
 form button[type="submit"] {
   background: #fc5b62;
 }
-form button[type="submit"]:hover {
+form button[type="submit"]:hover,
+#multi-step-form button.next-button:hover {
   background: #8b0000;
 }
 
@@ -9877,11 +9878,12 @@ form button[type="submit"]:hover {
   color: white;
   position: absolute;
   top: -15px;
-  right: 45%;
+  right: 46%;
 }
-.baggages svg {
-  width: 20px;
-  height: 20px;
+.baggages .included_container svg {
+  width: 18px;
+  height: 18px;
+  fill: white;
 }
 .baggages .frame {
   text-align: center;
@@ -9909,5 +9911,147 @@ form button[type="submit"]:hover {
 }
 .included {
   display: flex;
-  padding: 7px;
+}
+.included .included_container {
+  display: flex;
+  padding: 5px;
+  background-color: #fc5b62;
+  color: white;
+  font-size: 13px;
+  border-radius: 23px;
+  font-weight: 600;
+}
+.registration h5 {
+  margin-bottom: 1.5rem;
+  padding: 10px 20px;
+  font-weight: 600;
+}
+@media screen and (max-width: 770px) {
+  .bags img {
+    width: 90px;
+    height: 130px;
+  }
+}
+
+.main_text {
+  font-weight: 600;
+}
+.checked_baggages h5 {
+  margin: 0;
+}
+.checked_baggages .summary {
+  padding: 10px 20px;
+}
+
+#multi-step-form .form-step .payment span.amount_text {
+  font-size: 14px;
+}
+#multi-step-form .form-step .payment .amount {
+  color: #fc5b62;
+  font-weight: 700;
+  font-size: 31px;
+}
+@media (max-width: 767px) {
+  .prices {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .prices img {
+    height: auto;
+  }
+}
+.pricing-plan-wrap {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 1px rgba(62, 62, 62, 0.5);
+  color: #222;
+  margin: 0 auto 50px;
+  width: 340px;
+  min-height: 425px;
+  overflow: hidden;
+  text-align: center;
+  transition: all 0.3s ease 0s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.pricing-plan-wrap:hover {
+  box-shadow: 0 0 10px 1px rgba(62, 62, 62, 0.8);
+}
+.pricing-plan-header {
+  background-color: #fc5b62;
+  color: #fff;
+  height: 168px;
+  margin: 0 0 85px;
+  padding: 0 15px 0;
+  position: relative;
+}
+.pricing-plan-header > h3 {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0 -15px 30px;
+  padding: 30px 15px;
+}
+
+.price-holder {
+  background-color: #666;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  bottom: 0;
+  color: #222;
+  height: 150px;
+  left: 50%;
+  margin-bottom: -75px;
+  margin-left: -75px;
+  padding: 30px 0;
+  position: absolute;
+  width: 150px;
+}
+.price-holder p {
+  color: #fff;
+  font-size: 48px;
+  font-weight: bold;
+  margin: 0;
+}
+.price-holder sub {
+  bottom: 10px;
+  color: #fff;
+  font-size: 14px;
+}
+.pricing-plan-wrap .btn-custom {
+  background: #212141;
+  color: white;
+  font-weight: 600;
+  width: 150px;
+  margin: 30px 0;
+  align-self: center;
+}
+.pricing-plan-wrap .btn-custom:hover {
+  background-color: #666;
+  color: white;
+}
+@media screen and (max-width: 769px) {
+  form .part label,
+  .valid_pass_link {
+    font-size: 12.5px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .pricing-plan-wrap {
+    width: 280px;
+    height: 375px;
+  }
+  .price-holder {
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+    left: 60%;
+    bottom: auto;
+  }
+  .price-holder p {
+    font-size: 33px;
+  }
+}
+#multi-step-form .visa_validity_date {
+  display: none;
 }
