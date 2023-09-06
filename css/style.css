@@ -6499,9 +6499,9 @@ ul.bullets li:before {
   .hero_single.version_2 .wrapper h3 {
     font-size: 1.375rem;
   }
-  .hero_single .wrapper h3 {
+  /* .hero_single .wrapper h3 {
     font-size: 1.4375rem;
-  }
+  } */
   #custom-search-input .search-query {
     padding-left: 15px;
   }

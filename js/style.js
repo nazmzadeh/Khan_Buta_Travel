@@ -198,27 +198,31 @@ const childrenRow = document.querySelector('.row-children');
 for (let i = 0; i < decreaseButtons.length; i++) {
 
 
-    increaseButtons[i].addEventListener('click', () => {
-        countInputs[i].value++;
-        tempCounts[i] = countInputs[i].value;
-
-        decreaseButtons[i].classList.remove("disabled")
-        decreaseButtons[i].removeAttribute("disabled")
-
-    });
-    decreaseButtons[i].addEventListener('click', () => {
-        if (countInputs[i].value > 0) {
-            countInputs[i].value--;
+    if (increaseButtons && countInputs && decreaseButtons) {
+        increaseButtons[i].addEventListener('click', () => {
+            countInputs[i].value++;
             tempCounts[i] = countInputs[i].value;
 
-        }
-        console.log(tempCounts[0])
-        if (parseInt(countInputs[0].value) <= 1) {
-            adultDecreaseButton.classList.add("disabled")
-            adultDecreaseButton.setAttribute("disabled", "")
+            decreaseButtons[i].classList.remove("disabled")
+            decreaseButtons[i].removeAttribute("disabled")
 
-        }
-    });
+        })
+    };
+    if (decreaseButtons && countInputs && adultDecreaseButton) {
+        decreaseButtons[i].addEventListener('click', () => {
+            if (countInputs[i].value > 0) {
+                countInputs[i].value--;
+                tempCounts[i] = countInputs[i].value;
+
+            }
+            console.log(tempCounts[0])
+            if (parseInt(countInputs[0].value) <= 1) {
+                adultDecreaseButton.classList.add("disabled")
+                adultDecreaseButton.setAttribute("disabled", "")
+
+            }
+        })
+    };
 
 }
 
