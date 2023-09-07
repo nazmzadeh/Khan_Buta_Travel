@@ -1723,6 +1723,7 @@ form select {
 .disabled_input {
   cursor: not-allowed;
 }
-form input {
+form input,
+select {
   background-color: white;
 }
