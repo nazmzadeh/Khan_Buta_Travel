@@ -180,15 +180,3 @@ function init() {
 }
 
 init();
-
-// const phoneInputField = document.querySelectorAll(".telephone");
-// phoneInputField.forEach((phone) => {
-//     const phoneInput = window.intlTelInput(phone, {
-//         preferredCountries: ["az", "pk"],
-//         utilsScript:
-//             "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
-//     });
-// })
-
-// console.log(phoneInputField)
-// console.log(phoneInput)
