@@ -1576,3 +1576,10 @@
     return DateRangePicker;
 
 }));
+
+$(document).on('click', function (e) {
+    if (!$(e.target).closest('.my-dropdown').length) {
+        // Clicked outside of the date-box, hide it
+        $('.date-box').removeClass('show');
+    }
+});

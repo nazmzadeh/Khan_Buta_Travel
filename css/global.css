@@ -1727,3 +1727,8 @@ form input,
 select {
   background-color: white;
 }
+
+.myRow {
+  margin: 0;
+  align-items: center;
+}

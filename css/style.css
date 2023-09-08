@@ -10055,3 +10055,24 @@ form button[type="submit"]:hover,
 #multi-step-form .visa_validity_date {
   display: none;
 }
+
+.city-select-box {
+  width: 100%;
+}
+.my-dropdown-box.my-dropdown-box.show {
+  min-width: 310px;
+  width: 310px;
+}
+
+@media screen and (max-width: 990px) {
+  .hero_single > img {
+    height: 600px;
+  }
+}
+@media (max-width: 767px){
+ .hero_single.radio_cat .switch-field {
+    overflow-x: hidden;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px
+}}
