@@ -10063,16 +10063,55 @@ form button[type="submit"]:hover,
   min-width: 310px;
   width: 310px;
 }
-
+@media screen and (max-width: 992px) {
+  div.s002 form .inner-form .input-field.fouth-wrap {
+    margin-bottom: auto;
+    width: auto;
+  }
+  div.s002 form .inner-form .input-field.first-wrap {
+    width: auto;
+  }
+  div.s002 form .inner-form .input-field {
+    margin-bottom: 5px;
+  }
+  div.s002 form .inner-form .input-field.count_wrap {
+    width: 100%;
+  }
+}
+.inner-form {
+  gap: 1px;
+}
+.s002 form .inner-form .input-field.search-container {
+  background: transparent;
+}
 @media screen and (max-width: 990px) {
   .hero_single > img {
     height: 600px;
   }
 }
-@media (max-width: 767px){
- .hero_single.radio_cat .switch-field {
+
+@media (max-width: 767px) {
+  .hero_single.radio_cat .switch-field {
     overflow-x: hidden;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 10px
-}}
+    gap: 10px;
+  }
+}
+
+.inner-form .myRow {
+  gap: 1px;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 450px) {
+  .s002 form .inner-form .input-field.fifth-wrap button.btn-search {
+    width: 100%;
+    padding: 10px;
+    height: 47px;
+  }
+  .s002 form .inner-form div.input-field.fifth-wrap {
+    width: 50%;
+    min-width: auto;
+  }
+}
