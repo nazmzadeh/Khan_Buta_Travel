@@ -20,33 +20,35 @@ const navbar = () => {
 // navbar();
 
 
+if (document.querySelector(".slick_lightbox")) {
+    $(document).ready(function () {
 
+        $('.slick_lightbox').slick({
+            dots: false,
+            slidesToShow: 1,
+            arrows: true,
 
-$(document).ready(function () {
-
-    $('.slick_lightbox').slick({
-        dots: false,
-        slidesToShow: 1,
-        arrows: true,
+        });
 
     });
 
-});
 
-
-$('.slick_lightbox').slickLightbox({
-    itemSelector: 'a',
-    arrows: true,
-    navigateByKeyboard: true,
-    responsive: [
-        {
-            breakpoint: 860,
-            settings: {
-                arrows: false
+    $('.slick_lightbox').slickLightbox({
+        itemSelector: 'a',
+        arrows: true,
+        navigateByKeyboard: true,
+        responsive: [
+            {
+                breakpoint: 860,
+                settings: {
+                    arrows: false
+                }
             }
-        }
-    ]
-});
+        ]
+    });
+
+}
+
 
 // Slick lightbox end
 
